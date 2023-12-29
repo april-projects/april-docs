@@ -1,1 +1,8 @@
-["index"]
+[
+  "index",
+  {
+    "type": "dir",
+    "name": "basic",
+    "label": "代码规范指南"
+  }
+]

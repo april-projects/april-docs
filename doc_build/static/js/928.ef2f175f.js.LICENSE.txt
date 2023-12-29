@@ -10,19 +10,17 @@
 
 /*! ./util/create */
 
-/*! D:/WebstormProjects/april-docs/docs/index.md */
-
 /*! @babel/runtime/helpers/defineProperty */
 
 /*! ./info */
 
-/*! core-js/modules/esnext.iterator.constructor.js */
+/*! react */
+
+/*! @rspress/shared */
 
 /*! react-fast-compare */
 
-/*! react-helmet-async */
-
-/*! core-js/modules/web.url-search-params.has.js */
+/*! react */
 
 /*! ./types */
 
@@ -32,57 +30,35 @@
 
 /*! is-hexadecimal */
 
-/*! @rspress/runtime */
-
-/*! react-helmet-async */
-
-/*! ./bundle */
-
-/*! ./utils */
-
-/*! react-helmet-async */
+/*! ./iterableToArray.js */
 
 /*! character-reference-invalid */
-
-/*! htmr */
 
 /*! ./lib/xmlns */
 
 /*! react */
 
-/*! react */
-
-/*! @rspress/runtime */
+/*! ./toPropertyKey.js */
 
 /*! ./util/case-insensitive-transform */
 
-/*! react-dom */
-
 /*! ./typescript.js */
-
-/*! virtual-prism-languages */
 
 /*! react-syntax-highlighter/dist/esm/languages/prism/diff */
 
 /*! prismjs/components/prism-core */
 
-/*! ./typeof.js */
-
-/*! html-tags */
+/*! virtual-search-hooks */
 
 /*! refractor/lang/tsx.js */
 
-/*! ./toPrimitive.js */
+/*! ./lib/index.js */
 
-/*! core-js/modules/esnext.async-iterator.map.js */
+/*! react/jsx-runtime */
 
 /*! react */
 
-/*! virtual-site-data */
-
 /*! @babel/runtime/helpers/objectWithoutProperties */
-
-/*! react-router-dom */
 
 /**
  * Prism: Lightweight, robust, elegant syntax highlighting
@@ -95,23 +71,17 @@
 
 /*! refractor/lang/json.js */
 
-/*! ./MediumZoom.css */
-
 /*! xtend */
 
-/*! ./NoSSR */
+/*! core-js/modules/esnext.iterator.constructor.js */
 
 /*! react-syntax-highlighter/dist/esm/languages/prism/xml-doc */
 
-/*! core-js/modules/esnext.async-iterator.find.js */
-
-/*! core-js/modules/web.url-search-params.delete.js */
-
 /*! is-alphabetical */
 
-/*! @mdx-js/react */
+/*! react-helmet-async */
 
-/*! ./typeof.js */
+/*! core-js/modules/web.url-search-params.has.js */
 
 /*! ./html-tags.json */
 
@@ -123,59 +93,79 @@
 
 /*! refractor/lang/yaml.js */
 
-/*! property-information/normalize */
+/*! @rspress/runtime */
 
-/*! react-syntax-highlighter/dist/esm/languages/prism/typescript */
+/*! react-helmet-async */
+
+/*! ./bundle */
+
+/*! property-information/normalize */
 
 /*! ./utils */
 
-/*! core-js/modules/web.url-search-params.size.js */
+/*! react-helmet-async */
 
-/*! virtual-site-data */
+/*! react-syntax-highlighter/dist/esm/languages/prism/typescript */
+
+/*! D:/WebstormProjects/april-docs/docs/guide/index.md */
+
+/*! htmr */
+
+/*! react */
+
+/*! @rspress/runtime */
+
+/*! react-dom */
+
+/*! virtual-prism-languages */
+
+/*! ./typeof.js */
 
 /*! react-syntax-highlighter/dist/esm/languages/prism/less */
 
 /*! react-lazy-with-preload */
 
-/*! virtual-routes */
+/*! html-tags */
 
 /*! ./util/case-insensitive-transform */
 
+/*! ./toPrimitive.js */
+
+/*! core-js/modules/esnext.async-iterator.map.js */
+
 /*! ./factory */
 
-/*! lodash-es */
+/*! virtual-site-data */
+
+/*! react-router-dom */
 
 /*! ./util/create */
 
-/*! D:/WebstormProjects/april-docs/docs/index.md */
+/*! ./MediumZoom.css */
 
-/*! virtual-site-data */
+/*! ./NoSSR */
+
+/*! core-js/modules/esnext.async-iterator.find.js */
 
 /*! property-information/find */
 
 /*! react-syntax-highlighter/dist/esm/languages/prism/scss */
 
-/*! react-dom */
+/*! core-js/modules/web.url-search-params.delete.js */
+
+/*! ./typeof.js */
+
+/*! @mdx-js/react */
 
 /*! comma-separated-tokens */
 
-/*! react/jsx-runtime */
-
-/*! ./hooks */
-
 /*! react-syntax-highlighter/dist/esm/languages/prism/javascript */
-
-/*! @theme */
 
 /*! ./prism-light */
 
 /*! medium-zoom 1.0.8 | MIT License | https://github.com/francoischalifour/medium-zoom */
 
-/*! flexsearch */
-
 /*! ./lib/xlink */
-
-/*! D:/WebstormProjects/april-docs/docs/guide/index.md */
 
 /*! @babel/runtime/helpers/defineProperty */
 
@@ -190,27 +180,23 @@
  * @license MIT
  */
 
-/*! virtual-site-data */
-
 /*! ./create-element */
-
-/*! @rspress/shared */
 
 /*! react-syntax-highlighter/dist/esm/languages/prism/css */
 
+/*! ./utils */
+
+/*! core-js/modules/web.url-search-params.size.js */
+
 /*! ./lib/xml */
 
-/*! ./Content */
+/*! virtual-site-data */
 
 /*! is-decimal */
 
-/*! ./hooks */
+/*! virtual-routes */
 
-/*! core-js/modules/esnext.iterator.find.js */
-
-/*! ./arrayLikeToArray.js */
-
-/*! @rspress/shared */
+/*! lodash-es */
 
 /*! ./util/create */
 
@@ -224,7 +210,7 @@
 
 /*! ./lib/util/info */
 
-/*! react */
+/*! virtual-site-data */
 
 /*! ./util/types */
 
@@ -234,29 +220,31 @@
 
 /*! ./lang/css */
 
-/*! @theme */
-
 /*! refractor/lang/xml-doc.js */
 
 /*! ./lang/javascript */
 
 /*! character-entities-legacy */
 
+/*! react-dom */
+
 /*! react */
 
 /*! ./defined-info */
+
+/*! react/jsx-runtime */
+
+/*! ./hooks */
 
 /*! ../../normalize */
 
 /*! ./jsx.js */
 
-/*! is-html */
+/*! @theme */
 
-/*! react-syntax-highlighter */
+/*! flexsearch */
 
 /*! ./case-sensitive-transform */
-
-/*! ./App */
 
 /*! ./schema */
 
@@ -266,15 +254,59 @@
 
 /*! react-syntax-highlighter/dist/esm/languages/prism/bash */
 
-/*! react/jsx-runtime */
+/*! virtual-site-data */
+
+/*! @rspress/shared */
 
 /*! @babel/runtime/helpers/toConsumableArray */
 
+/*! ./Content */
+
+/*! D:/WebstormProjects/april-docs/docs/guide/basic/index.md */
+
+/*! ./hooks */
+
+/*! core-js/modules/esnext.iterator.find.js */
+
+/*! ./arrayLikeToArray.js */
+
+/*! D:/WebstormProjects/april-docs/docs/index.md */
+
+/*! @rspress/shared */
+
+/*! property-information/html */
+
+/*! ./decode-entity */
+
+/*! react */
+
 /*! @theme */
+
+/*! is-alphanumerical */
+
+/*! is-html */
+
+/*! react-syntax-highlighter */
+
+/*! ./App */
+
+/*! refractor/lang/scss.js */
+
+/*! ./lib/util/merge */
+
+/*! react */
+
+/*! react/jsx-runtime */
+
+/*! @theme */
+
+/*! D:/WebstormProjects/april-docs/docs/index.md */
 
 /*! nprogress */
 
 /*! nprogress/nprogress.css */
+
+/*! react */
 
 /*! Bundled license information:
 
@@ -290,45 +322,69 @@ lodash-es/lodash.js:
    *)
 */
 
+/*! space-separated-tokens */
+
 /*! virtual-search-index-hash */
 
 /*! ./arrayLikeToArray.js */
 
-/*! property-information/html */
-
 /*! ./arrayWithoutHoles.js */
+
+/*! ./highlight */
 
 /*! body-scroll-lock */
 
 /*! virtual-routes */
 
-/*! ./decode-entity */
+/*! refractor/lang/diff.js */
+
+/*! D:/WebstormProjects/april-docs/docs/guide/index.md */
+
+/*! ./lang/markup */
+
+/*! react-syntax-highlighter/dist/esm/languages/prism/json */
+
+/*! refractor/core */
 
 /*! react/jsx-runtime */
 
 /*! ./bundle.css */
 
-/*! is-alphanumerical */
+/*! hast-util-parse-selector */
+
+/*! ./factoryWithThrowingShims */
+
+/*! ./lib/html */
 
 /*! @rspress/shared */
 
 /*! react/jsx-runtime */
 
-/*! @rspress/runtime */
+/*! ./lang/clike */
 
-/*! refractor/lang/scss.js */
+/*! shallowequal */
+
+/*! @rspress/runtime */
 
 /*! virtual-global-components */
 
-/*! ./lib/util/merge */
-
 /*! react */
 
-/*! react */
+/*! refractor/lang/typescript.js */
+
+/*! react-syntax-highlighter/dist/esm/languages/prism/tsx */
+
+/*! prop-types */
 
 /*! ./nonIterableSpread.js */
 
+/*! react */
+
+/*! ./schema */
+
 /*! @rspress/runtime */
+
+/*! ./normalize */
 
 /*! react */
 
@@ -340,78 +396,26 @@ lodash-es/lodash.js:
 
 /*! react-router-dom */
 
+/*! invariant */
+
 /*! virtual-routes */
 
-/*! react */
-
-/*! space-separated-tokens */
+/*! D:/WebstormProjects/april-docs/docs/guide/basic/index.md */
 
 /*! ./unsupportedIterableToArray.js */
 
-/*! virtual-site-data */
+/*! refractor/lang/less.js */
 
-/*! ./highlight */
+/*! virtual-site-data */
 
 /*! copy-to-clipboard */
 
-/*! refractor/lang/diff.js */
-
 /*! medium-zoom */
 
-/*! ./lang/markup */
+/*! @babel/runtime/helpers/extends */
 
-/*! react-syntax-highlighter/dist/esm/languages/prism/json */
-
-/*! refractor/core */
+/*! react-syntax-highlighter/dist/esm/languages/prism/markdown */
 
 /*! react */
 
 /*! ./objectWithoutPropertiesLoose.js */
-
-/*! hast-util-parse-selector */
-
-/*! ./factoryWithThrowingShims */
-
-/*! ./lib/html */
-
-/*! ./lang/clike */
-
-/*! shallowequal */
-
-/*! refractor/lang/typescript.js */
-
-/*! react-syntax-highlighter/dist/esm/languages/prism/tsx */
-
-/*! prop-types */
-
-/*! react */
-
-/*! react */
-
-/*! ./schema */
-
-/*! ./normalize */
-
-/*! @rspress/shared */
-
-/*! react */
-
-/*! invariant */
-
-/*! ./iterableToArray.js */
-
-/*! refractor/lang/less.js */
-
-/*! @babel/runtime/helpers/extends */
-
-/*! ./toPropertyKey.js */
-
-/*! react-syntax-highlighter/dist/esm/languages/prism/markdown */
-
-/*! D:/WebstormProjects/april-docs/docs/guide/index.md */
-
-/*! virtual-search-hooks */
-
-/*! ./lib/index.js */
-
-/*! react/jsx-runtime */
