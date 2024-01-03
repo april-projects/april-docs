@@ -5,11 +5,11 @@ export default defineConfig({
     root: path.join(__dirname, 'docs'),
     title: 'April',
     description: 'April 官方文档',
-    icon: '/favicon.png',
     logo: {
         light: '/logo.png',
         dark: '/logo.png',
     },
+    icon: '/favicon.png',
     themeConfig: {
         socialLinks: [
             {icon: 'github', mode: 'link', content: 'https://github.com/mobaijun'},
@@ -17,4 +17,16 @@ export default defineConfig({
             {icon: 'lark', mode: 'link', content: 'https://www.mobaijun.com'},
         ],
     },
+    markdown: {
+        showLineNumbers: true,
+        defaultWrapCode: true,
+        codeHighlighter: "prism",
+    },
+    builderConfig: {
+        output: {
+            distPath: {
+                root: 'doc_build',
+            },
+        },
+    }
 });
