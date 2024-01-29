@@ -304,6 +304,119 @@ public AbstractTip<Integer> insertMarketIndex(@Validated MarketIndexDTO dto) {
 }
 ```
 
+### 九丶判断规范
+
+~~~java
+/**
+ * 判断规范示例
+ * 
+ * 1. 布尔表达式命名规范
+ *    - 命名应当清晰、具有描述性
+ *    - 避免使用单个字母或缩写，除非是广泛接受的约定（例如，使用 "isEnabled()" 而不是 "isE()"）
+ *    - 使用驼峰命名法
+ *
+ * 2. 判断语句格式规范
+ *    - 使用大括号{}括起来判断体，即使只有一条语句
+ *    - 使用缩进使代码块更易读
+ *
+ * 3. 避免冗余的判断
+ *    - 不要使用多余的嵌套判断，保持代码的简洁性
+ *    - 考虑使用逻辑运算符（&&、||）来合并条件
+ *
+ * 4. 注意空指针判断
+ *    - 在可能出现空指针的地方进行判断，避免空指针异常
+ *    - 使用 Objects.requireNonNull 或 Optional 类来处理可能的空值
+ *
+ * 5. 使用 equals 方法进行对象比较
+ *    - 避免使用 "==" 运算符进行对象比较，应当使用 equals 方法
+ *    - 如果需要比较基本数据类型，可以使用 "==" 运算符
+ *
+ * 6. 使用 switch 语句的时候注意 break
+ *    - 在 switch 语句中，每个 case 语句结束后都要添加 break，防止穿透到下一个 case
+ *
+ * 7. 注释规范
+ *    - 在复杂的判断逻辑处添加注释，解释判断的目的和可能的结果
+ *    - 注释要保持更新，确保它们反映代码的实际状态
+ *
+ * 8. 单元测试
+ *    - 编写相应的单元测试来验证判断的正确性
+ *    - 考虑使用断言来验证判断的期望结果
+ *
+ * 9. 集合判断规范
+ *    - 在判断集合是否为空时，使用集合类的 isEmpty() 方法
+ *    - 避免使用 size() 方法判断集合是否为空，因为它可能引起不必要的遍历
+ *    - 示例：if (list.isEmpty()) { /* 集合为空的处理 */ }
+ */
+~~~
+
+#### 示例代码：
+
+~~~java
+import java.util.List;
+
+/**
+ * 判断规范示例（包含集合判断）
+ * 
+ * <p>
+ * 该类演示了在Java中编写判断语句的规范。其中包含布尔表达式的命名规范、判断语句的格式规范、避免冗余的判断、
+ * 注意空指针判断、使用 equals 方法进行对象比较、使用 switch 语句的时候注意 break、注释规范、单元测试等内容。
+ * </p>
+ * 
+ * <p>
+ * 集合判断规范：
+ * 在判断集合是否为空时，使用集合类的 isEmpty() 方法。避免使用 size() 方法判断集合是否为空，因为它可能引起不必要的遍历。
+ * </p>
+ * 
+ * <pre>
+ * 示例代码：
+ * {@code
+ * List<String> stringList = List.of("one", "two", "three");
+ * if (isListEmpty(stringList)) {
+ *     System.out.println("List为空");
+ * } else {
+ *     System.out.println("List不为空");
+ * }
+ * }
+ * </pre>
+ * 
+ * <p>
+ * 使用该类时，请注意替换示例中的具体逻辑和集合类型以适应你的实际项目需求。
+ * </p>
+ * 
+ * @version 1.0
+ * @since 2024-01-29
+ */
+public class JudgmentSpecificationWithCollectionsExample {
+
+    /**
+     * 判断List是否为空的示例方法
+     *
+     * @param list 待判断的List
+     * @return 如果List为空，则返回 true；否则返回 false
+     */
+    private static boolean isListEmpty(List<?> list) {
+        // 示例判断逻辑
+        return list == null || list.isEmpty();
+    }
+
+    /**
+     * 主方法，包含示例代码的执行
+     * 
+     * @param args 命令行参数
+     */
+    public static void main(String[] args) {
+        // 示例代码
+        List<String> stringList = List.of("one", "two", "three");
+
+        if (isListEmpty(stringList)) {
+            System.out.println("List为空");
+        } else {
+            System.out.println("List不为空");
+        }
+    }
+}
+~~~
+
 ***
 
 ## 四、代码提交
