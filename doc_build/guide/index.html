@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title data-rh="true">介绍 - April</title>
+    <meta content="April 官方文档" data-rh="true" name="description"/>
+    <script id="check-dark-light">
+        ;(() => {
+            const saved = localStorage.getItem('rspress-theme-appearance')
+            const prefereDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+            if (!saved || saved === 'auto' ? prefereDark : saved === 'dark') {
+                document.documentElement.classList.add('dark')
+            }
+        })()
+    </script>
+    <title>April</title>
+    <link href="/favicon.png" rel="icon">
+    <script defer="defer" src="/static/js/lib-lodash.d48b21fb.js"></script>
+    <script defer="defer" src="/static/js/lib-polyfill.f2304b6c.js"></script>
+    <script defer="defer" src="/static/js/lib-react.eda4bc75.js"></script>
+    <script defer="defer" src="/static/js/lib-router.2a531e45.js"></script>
+    <script defer="defer" src="/static/js/928.bafcd4b5.js"></script>
+    <script defer="defer" src="/static/js/index.d32ff4d0.js"></script>
+    <link href="/static/css/928.5fbe0c60.css" rel="stylesheet">
+</head>
+<body>
+<div id="root">
+    <div>
+        <div class="navContainer_f6cde sticky rspress-nav px-6 ">
+            <div class="container_f6cde flex justify-between items-center h-full">
+                <div class="navBarTitle_f6cde"><a class="flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"
+                                                  href="/"><img
+                        alt="logo" class="mr-4 rspress-logo" id="logo" src="/logo.png" style="height:1.6rem"/></a></div>
+                <div class="undefined flex flex-1 justify-end items-center">
+                    <div class="rightNav_f6cde">
+                        <div class="flex sm:flex-1 items-center sm:pl-4 sm:pr-2">
+                            <div class="navSearchButton_6e282">
+                                <button>
+                                    <svg height="24" hight="18" viewBox="0 0 32 32" width="18">
+                                        <path d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9Z"
+                                              fill="var(--rp-c-gray)"></path>
+                                    </svg>
+                                    <p class="searchWord_6e282">Search Docs</p>
+                                    <div style="opacity:0"><span></span><span>K</span></div>
+                                </button>
+                            </div>
+                            <div class="mobileNavSearchButton_6e282">
+                                <svg height="24" viewBox="0 0 32 32" width="24">
+                                    <path d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9Z"
+                                          fill="var(--rp-c-gray)"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="rspress-nav-menu menu h-14"><a class="link_03735  cursor-pointer" href="/guide/index.html"
+                                                                   target="">
+                            <div class="singleItem_f6cde activeItem_f6cde text-sm font-medium mx-1.5 px-3 py-2 flex items-center">
+                                指南
+                            </div>
+                        </a></div>
+                        <div class="flex-center flex-row">
+                            <div class="mx-2">
+                                <div class="md:mr-2 rspress-nav-appearance">
+                                    <div class="p-1 border border-solid border-gray-300 text-gray-400  cursor-pointer rounded-md hover:border-gray-600 hover:text-gray-600 dark:hover:border-gray-200 dark:hover:text-gray-200 transition-all duration-300">
+                                        <svg aria-hidden="true" fill="currentColor" height="18"
+                                             viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 4c-.6 0-1-.4-1-1V1c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1zM12 24c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1zM5.6 6.6c-.3 0-.5-.1-.7-.3L3.5 4.9c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.1.2-.4.3-.7.3zM19.8 20.8c-.3 0-.5-.1-.7-.3l-1.4-1.4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3zM3 13H1c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM23 13h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM4.2 20.8c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.4.3-.7.3zM18.4 6.6c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.5.3-.7.3z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="social-links menu-item_93d67 flex-center relative">
+                                <div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2"><a
+                                        class="social-links" href="https://github.com/mobaijun" rel="noopener noreferrer"
+                                        target="_blank">
+                                    <div class="social-links-icon_93d67">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>
+                                            GitHub</title>
+                                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                                        </svg>
+                                    </div>
+                                </a><a class="social-links"
+                                       href="https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png" rel="noopener noreferrer" target="_blank">
+                                    <div class="social-links-icon_93d67">
+                                        <svg aria-hidden="true" class="iconify iconify--ri" preserveAspectRatio="xMidYMid meet"
+                                             role="img" viewBox="0 0 24 24"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.574 13.711a.91.91 0 0 0 .898-.898c0-.498-.399-.898-.898-.898s-.898.4-.898.898c0 .5.4.898.898.898zm-4.425 0a.91.91 0 0 0 .898-.898c0-.498-.4-.898-.898-.898c-.5 0-.898.4-.898.898c0 .5.399.898.898.898zm6.567 5.04a.347.347 0 0 0-.172.37c0 .048 0 .097.025.147c.098.417.294 1.081.294 1.106c0 .073.025.122.025.172a.22.22 0 0 1-.221.22c-.05 0-.074-.024-.123-.048l-1.449-.836a.799.799 0 0 0-.344-.098c-.073 0-.147 0-.196.024c-.688.197-1.4.295-2.161.295c-3.66 0-6.607-2.457-6.607-5.505c0-3.047 2.947-5.505 6.607-5.505c3.659 0 6.606 2.458 6.606 5.505c0 1.647-.884 3.146-2.284 4.154zM16.673 8.099a9.105 9.105 0 0 0-.28-.005c-4.174 0-7.606 2.86-7.606 6.505c0 .554.08 1.09.228 1.6h-.089a9.963 9.963 0 0 1-2.584-.368c-.074-.025-.148-.025-.222-.025a.832.832 0 0 0-.418.123l-1.748 1.005c-.05.025-.099.05-.148.05a.273.273 0 0 1-.27-.27c0-.074.024-.123.049-.197c.024-.024.246-.834.369-1.324c0-.05.024-.123.024-.172a.556.556 0 0 0-.221-.442C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3c3.765 0 6.93 2.169 7.723 5.098zm-5.154.418c.573 0 1.026-.477 1.026-1.026c0-.573-.453-1.026-1.026-1.026s-1.026.453-1.026 1.026s.453 1.026 1.026 1.026zm-5.26 0c.573 0 1.027-.477 1.027-1.026c0-.573-.454-1.026-1.027-1.026c-.572 0-1.026.453-1.026 1.026s.454 1.026 1.026 1.026z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+                                </a><a class="social-links" href="https://www.mobaijun.com" rel="noopener noreferrer"
+                                       target="_blank">
+                                    <div class="social-links-icon_93d67">
+                                        <svg height="48" viewBox="0 0 48 48" width="48"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-rule="evenodd" fill-rule="evenodd">
+                                                <path d="M41.0716 5.99409L3.31071 16.5187L12.3856 25.8126L20.7998 25.9594L30.4827 16.5187C30.2266 15.9943 30.0985 15.5552 30.0985 15.2013C30.0985 14.4074 30.4104 13.7786 30.8947 13.333C31.7241 12.57 32.7222 12.4558 33.8889 12.9905L41.0716 5.99409Z"></path>
+                                                <path d="M42.1021 6.72842L31.5775 44.4893L22.2836 35.4144L22.1367 27.0002L31.5115 17.4816C32.0195 17.8454 32.5743 18.0105 33.1759 17.9769C34.0784 17.9264 34.6614 17.3813 34.9349 17.0602C35.2083 16.7392 35.5293 16.2051 35.5025 15.4113C35.4847 14.8821 35.3109 14.3941 34.9812 13.9472L42.1021 6.72842Z"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobileNavMenu_f6cde">
+                        <div class="navScreen_457e8 " id="navScreen">
+                            <div class="container_457e8">
+                                <div class="navMenu_457e8">
+                                    <div class="navMenuItem_457e8 w-full"><a class="link_03735  cursor-pointer"
+                                                                             href="/guide/index.html" target="">
+                                        <div class="singleItem_f6cde activeItem_f6cde text-sm font-medium mx-1.5 px-3 py-2 flex items-center">
+                                            指南
+                                        </div>
+                                    </a></div>
+                                </div>
+                                <div class="flex-center flex-col gap-2">
+                                    <div class="mt-2 navAppearance_457e8 flex justify-center"></div>
+                                    <div class="social-links menu-item_93d67 flex-center relative">
+                                        <div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2">
+                                            <a class="social-links" href="https://github.com/mobaijun"
+                                               rel="noopener noreferrer" target="_blank">
+                                                <div class="social-links-icon_93d67">
+                                                    <svg role="img" viewBox="0 0 24 24"
+                                                         xmlns="http://www.w3.org/2000/svg"><title>GitHub</title>
+                                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                                                    </svg>
+                                                </div>
+                                            </a><a
+                                                class="social-links"
+                                                href="https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png" rel="noopener noreferrer" target="_blank">
+                                            <div class="social-links-icon_93d67">
+                                                <svg aria-hidden="true" class="iconify iconify--ri" preserveAspectRatio="xMidYMid meet"
+                                                     role="img" viewBox="0 0 24 24"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M18.574 13.711a.91.91 0 0 0 .898-.898c0-.498-.399-.898-.898-.898s-.898.4-.898.898c0 .5.4.898.898.898zm-4.425 0a.91.91 0 0 0 .898-.898c0-.498-.4-.898-.898-.898c-.5 0-.898.4-.898.898c0 .5.399.898.898.898zm6.567 5.04a.347.347 0 0 0-.172.37c0 .048 0 .097.025.147c.098.417.294 1.081.294 1.106c0 .073.025.122.025.172a.22.22 0 0 1-.221.22c-.05 0-.074-.024-.123-.048l-1.449-.836a.799.799 0 0 0-.344-.098c-.073 0-.147 0-.196.024c-.688.197-1.4.295-2.161.295c-3.66 0-6.607-2.457-6.607-5.505c0-3.047 2.947-5.505 6.607-5.505c3.659 0 6.606 2.458 6.606 5.505c0 1.647-.884 3.146-2.284 4.154zM16.673 8.099a9.105 9.105 0 0 0-.28-.005c-4.174 0-7.606 2.86-7.606 6.505c0 .554.08 1.09.228 1.6h-.089a9.963 9.963 0 0 1-2.584-.368c-.074-.025-.148-.025-.222-.025a.832.832 0 0 0-.418.123l-1.748 1.005c-.05.025-.099.05-.148.05a.273.273 0 0 1-.27-.27c0-.074.024-.123.049-.197c.024-.024.246-.834.369-1.324c0-.05.024-.123.024-.172a.556.556 0 0 0-.221-.442C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3c3.765 0 6.93 2.169 7.723 5.098zm-5.154.418c.573 0 1.026-.477 1.026-1.026c0-.573-.453-1.026-1.026-1.026s-1.026.453-1.026 1.026s.453 1.026 1.026 1.026zm-5.26 0c.573 0 1.027-.477 1.027-1.026c0-.573-.454-1.026-1.027-1.026c-.572 0-1.026.453-1.026 1.026s.454 1.026 1.026 1.026z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                        </a><a class="social-links" href="https://www.mobaijun.com" rel="noopener noreferrer"
+                                               target="_blank">
+                                            <div class="social-links-icon_93d67">
+                                                <svg height="48" viewBox="0 0 48 48" width="48"
+                                                     xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-rule="evenodd" fill-rule="evenodd">
+                                                        <path d="M41.0716 5.99409L3.31071 16.5187L12.3856 25.8126L20.7998 25.9594L30.4827 16.5187C30.2266 15.9943 30.0985 15.5552 30.0985 15.2013C30.0985 14.4074 30.4104 13.7786 30.8947 13.333C31.7241 12.57 32.7222 12.4558 33.8889 12.9905L41.0716 5.99409Z"></path>
+                                                        <path d="M42.1021 6.72842L31.5775 44.4893L22.2836 35.4144L22.1367 27.0002L31.5115 17.4816C32.0195 17.8454 32.5743 18.0105 33.1759 17.9769C34.0784 17.9264 34.6614 17.3813 34.9349 17.0602C35.2083 16.7392 35.5293 16.2051 35.5025 15.4113C35.4847 14.8821 35.3109 14.3941 34.9812 13.9472L42.1021 6.72842Z"></path>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                        </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class=" navHamburger_e7b06 text-gray-500">
+                            <svg fill="currentColor" height="32" width="32" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="8" cy="16" fill="currentColor" r="2"></circle>
+                                <circle cx="16" cy="16" fill="currentColor" r="2"></circle>
+                                <circle cx="24" cy="16" fill="currentColor" r="2"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="docLayout_edeb4 pt-0">
+                <div class="rspress-sidebar-menu">
+                    <button class="flex-center">
+                        <div class="text-md mr-2">
+                            <svg height="1em" viewBox="0 0 32 32" width="1em">
+                                <path d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z" fill="currentColor"></path>
+                            </svg>
+                        </div>
+                        <span class="text-sm">Menu</span></button>
+                </div>
+                <aside class="sidebar_71eca rspress-sidebar ">
+                    <div class="navTitleMask_71eca">
+                        <div class="navBarTitle_f6cde"><a class="flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"
+                                                          href="/"><img
+                                alt="logo" class="mr-4 rspress-logo" id="logo" src="/logo.png"
+                                style="height:1.6rem"/></a></div>
+                    </div>
+                    <div class="mt-1 sidebarContent_71eca">
+                        <div class="rspress-scrollbar"
+                             style="max-height:calc(100vh - var(--rp-nav-height) - 8px);overflow:auto">
+                            <nav class="pb-2"><a class="link_03735 menuLink_71eca cursor-pointer" href="/guide/index.html"
+                                                 target="">
+                                <div class="menuItemActive_71eca mt-0.5 py-2 px-3 font-medium flex"
+                                     style="font-size:14px;margin-left:0;border-radius:0 1rem 1rem 0;padding-left:24px;font-weight:bold;color:var(--rp-c-brand)">
+                                    介绍
+                                </div>
+                            </a>
+                                <section class="mt-0.5 block" style="margin-left:0">
+                                    <div class="flex justify-between items-center  menuItem_71eca"
+                                         style="border-radius:0 1rem 1rem 0;cursor:pointer"><h2
+                                            class="py-2 px-3 text-sm font-medium flex"
+                                            style="font-size:14px;padding-left:24px;font-weight:bold">代码规范指南</h2>
+                                        <div class="collapseContainer_71eca p-2 rounded-xl">
+                                            <div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(90deg)">
+                                                <svg height="1em" viewBox="0 0 32 32" width="1em">
+                                                    <path d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"
+                                                          fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="transition-all duration-300 ease-in-out" style="overflow:hidden">
+                                        <div class="rspress-sidebar-group transition-opacity duration-500 ease-in-out"
+                                             style="opacity:1;margin-left:12px">
+                                            <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/guide/basic/index.html"
+                                                    target="">
+                                                <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
+                                                     style="font-size:13px;margin-left:18px;border-radius:0 1rem 1rem 0">
+                                                    常用编程技巧和代码规范总结
+                                                </div>
+                                            </a></div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </nav>
+                        </div>
+                    </div>
+                </aside>
+                <div class="content_edeb4 rspress-doc-container flex flex-shrink-0 mx-auto">
+                    <div class="w-full">
+                        <div>
+                            <div class="rspress-doc"><!--$--><h1 class="text-3xl mb-10 leading-10 tracking-tight title_3b154"
+                                                                 id="介绍">
+                                介绍<a aria-hidden="true" class="link_3b154 header-anchor" href="#介绍">#</a></h1>
+                                <h2 class="mt-14 mb-6 text-2xl tracking-tight title_3b154" id="april">April<a
+                                        aria-hidden="true" class="link_3b154 header-anchor" href="#april">#</a></h2>
+                                <p class="my-4 leading-7"><code>April </code>组织致力于为项目的迅速发展提供一系列全面而强大的基础能力，以便用户能够在满足项目需求的同时迅速、灵活地进行功能的拓展。我们致力于构建一个开放而创新的生态系统，为开发者提供高效、可靠的工具和资源，帮助他们更轻松地实现项目的快速迭代和卓越发展。我们的目标是为用户创造一个富有活力的开发环境，使他们能够在不断变化的技术和市场要求中保持敏捷和竞争力。通过整合丰富的基础能力，<code>April </code>为开发者提供了一个稳固的基础，助力他们专注于项目的核心创新，实现更快、更灵活的产品交付。
+                                </p>
+                                <h2 class="mt-14 mb-6 text-2xl tracking-tight title_3b154" id="前言">前言<a
+                                        aria-hidden="true" class="link_3b154 header-anchor" href="#前言">#</a></h2>
+                                <p class="my-4 leading-7">
+                                    在使用其他后台管理脚手架进行开发时，常常会遇到由于项目业务需求需要进行二次开发的情况。然而，在长时间的开发过程中，一旦源项目进行迭代升级，同步更新变得十分困难。</p>
+                                <p class="my-4 leading-7">因此，<code>April </code>组织建议在项目开发中采用依赖的方式引入
+                                    <code>April </code>组织提供的所有功能。这样，在后续跟随 <code>April </code>组织版本升级时，只需修改相应的依赖版本号，即可轻松完成同步更新。
+                                </p>
+                                <p class="my-4 leading-7"><code>April </code>已将所有 <code>JAR </code>包推送至中央仓库，并为每个版本升级提供了相应的
+                                    <code>SQL </code>改动文件。</p>
+                                <p class="my-4 leading-7">如果在使用过程中遇到必须通过二次开发修改源码才能解决的问题或实现特定功能的情况，我们欢迎您提出
+                                    <code>issues</code>。若这个功能具有通用性，我们将考虑为 <code>April </code>添加相应的能力，同时也欢迎您直接提交
+                                    <code>PR </code>进行改动。我们致力于创建一个开放、灵活且与时俱进的开发环境，共同推动项目的进步与创新。
+                                </p>
+                                <h2 class="mt-14 mb-6 text-2xl tracking-tight title_3b154" id="项目仓库">项目仓库<a
+                                        aria-hidden="true" class="link_3b154 header-anchor" href="#项目仓库">#</a></h2>
+                                <table class="table border-collapse text-base my-5 overflow-x-auto leading-7 border-gray-light-2">
+                                    <thead>
+                                    <tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-2">
+                                        <th align="center"
+                                            class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-2">
+                                            项目
+                                        </th>
+                                        <th align="center"
+                                            class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-2">
+                                            描述
+                                        </th>
+                                        <th align="center"
+                                            class="border border-solid px-4 py-2 text-text-1 text-base font-semibold border-gray-light-2">
+                                            GitHub
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-2">
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2">
+                                            april-wallpaper
+                                        </td>
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2">
+                                            一个每日自动拉取壁纸写入readme文件的程序
+                                        </td>
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2"><a
+                                                class="link_03735  link_3b154 inline-link_3b154" href="https://github.com/april-projects/april-wallpaper"
+                                                rel="noopener noreferrer"
+                                                target="_blank">april-projects/april-wallpaper:
+                                            一个每日自动拉取壁纸写入readme文件的程序</a></td>
+                                    </tr>
+                                    <tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-2">
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2">
+                                            april-zh-hotspot-push
+                                        </td>
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2">
+                                            利用GitHub actions 自动爬取知乎每日热榜50条，目前已支持接入钉钉机器人，飞书机器人.(本地jdk版本最低11)
+                                        </td>
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2"><a
+                                                class="link_03735  link_3b154 inline-link_3b154"
+                                                href="https://github.com/april-projects/april-zh-hotspot-push" rel="noopener noreferrer"
+                                                target="_blank">april-projects/april-zh-hotspot-push:
+                                            知乎热点推送</a></td>
+                                    </tr>
+                                    <tr class="border border-solid transition-colors duration-500 even:bg-soft border-gray-light-2">
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2">
+                                            april-script-and-tools
+                                        </td>
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2">
+                                            该项目旨在提供一些常用的 <strong class="font-semibold">Shell 脚本</strong> 和
+                                            <strong class="font-semibold">批处理脚本</strong>，用于自动化工作流程、软件包管理、漏洞修复以及代码质量提升。
+                                        </td>
+                                        <td align="center" class="border border-solid  px-4 py-2 border-gray-light-2"><a
+                                                class="link_03735  link_3b154 inline-link_3b154"
+                                                href="https://github.com/april-projects/april-script-and-tools" rel="noopener noreferrer"
+                                                target="_blank">april-projects/april-script-and-tools:
+                                            Commonly used shell scripts and batch scripts at work</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <h2 class="mt-14 mb-6 text-2xl tracking-tight title_3b154" id="加入我们">加入我们<a
+                                        aria-hidden="true" class="link_3b154 header-anchor" href="#加入我们">#</a></h2>
+                                <p class="my-4 leading-7">
+                                    欢迎加入我们！我们正在寻找具备专业前端和多语言开发经验的优秀开发者，无论您擅长哪种语言，只要您对开源充满热情，我们都欢迎您的加入。</p>
+                                <p class="my-4 leading-7">
+                                    如果您对项目的发展充满热情，愿意为开源事业贡献自己的力量，并且不介意目前项目是无报酬的，我们期待您的参与。您可以通过微信联系我们，微信号：<code>[kjs-mobaijun]</code>。
+                                </p>
+                                <p class="my-4 leading-7">
+                                    加入我们的团队，您将有机会参与到创新的项目中，与志同道合的开发者共同探讨和推动开源技术的发展。期待您的加入，共同打造更加开放、充满活力的开发社区！</p>
+                                <!--/$--></div>
+                            <div class="rspress-doc-footer">
+                                <footer class="mt-8">
+                                    <div class="xs:flex pb-5 px-2 justify-end items-center"></div>
+                                    <div class="flex flex-col"></div>
+                                    <div class="flex flex-col sm:flex-row sm:justify-around gap-4 pt-6">
+                                        <div class="prev_e7091 flex flex-col"></div>
+                                        <div class="next_e7091 flex flex-col"><a
+                                                class="link_03735 pager-link_9b9a7 next_9b9a7 cursor-pointer" href="/guide/basic/index.html"
+                                                target=""><span class="desc_9b9a7">Next page</span><span
+                                                class="title_9b9a7">常用编程技巧和代码规范总结</span></a></div>
+                                    </div>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside-container_edeb4">
+                        <div>
+                            <div class="flex flex-col">
+                                <div class="&lt;lg:hidden">
+                                    <div class="relative text-sm font-medium" id="aside-container">
+                                        <div class="leading-7 block text-sm font-semibold pl-3">ON THIS PAGE</div>
+                                        <nav class="mt-1">
+                                            <ul class="relative">
+                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block"
+                                                       href="#april"
+                                                       style="padding-left:0;font-weight:semibold"><span
+                                                        class="aside-link-text block">April</span></a></li>
+                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block"
+                                                       href="#前言"
+                                                       style="padding-left:0;font-weight:semibold"><span
+                                                        class="aside-link-text block">前言</span></a></li>
+                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block"
+                                                       href="#项目仓库"
+                                                       style="padding-left:0;font-weight:semibold"><span
+                                                        class="aside-link-text block">项目仓库</span></a></li>
+                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block"
+                                                       href="#加入我们"
+                                                       style="padding-left:0;font-weight:semibold"><span
+                                                        class="aside-link-text block">加入我们</span></a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div id="search-container"></div>
+</body>
+</html>
