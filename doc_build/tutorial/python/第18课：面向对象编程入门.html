@@ -1,1060 +1,180 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1" name="viewport">
-    <meta content="Rspress v1.22.0" name="generator">
-    <title data-rh="true">April</title>
-    <meta content="April 官方文档" data-rh="true" name="description"/>
-    <script>{
-        const e = localStorage.getItem("rspress-theme-appearance"),
-            t = window.matchMedia("(prefers-color-scheme: dark)").matches, a = e && "auto" !== e ? "dark" === e : t;
-        document.documentElement.classList.toggle("dark", a), document.documentElement.style.colorScheme = a ? "dark" : "light"
-    }</script>
-    <title>April</title>
-    <link href="/favicon.png" rel="icon">
-    <script defer="defer" src="/static/js/styles.a2ca1e04.js"></script>
-    <script defer="defer" src="/static/js/lib-lodash.70aa1ffa.js"></script>
-    <script defer="defer" src="/static/js/lib-polyfill.324e9ec3.js"></script>
-    <script defer="defer" src="/static/js/lib-react.3fa31774.js"></script>
-    <script defer="defer" src="/static/js/lib-router.8cdf1b18.js"></script>
-    <script defer="defer" src="/static/js/index.47d8f263.js"></script>
-    <link href="/static/css/styles.8aadd70d.css" rel="stylesheet">
-</head>
-<body>
-<div id="root">
-    <div>
-        <div class="navContainer_f6cde rspress-nav px-6 " style="position:sticky">
-            <div class="container_f6cde flex justify-between items-center h-full">
-                <div class="navBarTitle_f6cde"><a class="flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"
-                                                  href="/"><img
-                        alt="logo" class="mr-4 rspress-logo dark:hidden" id="logo" src="/logo.png"/><img alt="logo"
-                                                                                                         class="mr-4 rspress-logo hidden dark:block"
-                                                                                                         id="logo"
-                                                                                                         src="/logo.png"/></a>
-                </div>
-                <div class="flex flex-1 justify-end items-center">
-                    <div class="rightNav_f6cde">
-                        <div class="flex sm:flex-1 items-center sm:pl-4 sm:pr-2">
-                            <div class="rspress-nav-search-button navSearchButton_6e282">
-                                <button>
-                                    <svg height="18" viewBox="0 0 32 32" width="18">
-                                        <path d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9Z"
-                                              fill="var(--rp-c-gray)"></path>
-                                    </svg>
-                                    <p class="searchWord_6e282">Search Docs</p>
-                                    <div style="opacity:0"><span></span><span>K</span></div>
-                                </button>
-                            </div>
-                            <div class="mobileNavSearchButton_6e282">
-                                <svg height="24" viewBox="0 0 32 32" width="24">
-                                    <path d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9Z"
-                                          fill="var(--rp-c-gray)"></path>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="rspress-nav-menu menu h-14"><a class="link_03735  cursor-pointer" href="/guide/index.html"
-                                                                   target="">
-                            <div class="rspress-nav-menu-item singleItem_f6cde  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">
-                                指南
-                            </div>
-                        </a><a class="link_03735  cursor-pointer" href="/tutorial/index.html" target="">
-                            <div class="rspress-nav-menu-item singleItem_f6cde activeItem_f6cde text-sm font-medium mx-1.5 px-3 py-2 flex items-center">
-                                教程
-                            </div>
-                        </a></div>
-                        <div class="flex-center flex-row">
-                            <div class="mx-2">
-                                <div class="md:mr-2 rspress-nav-appearance">
-                                    <div class="p-1 border border-solid border-gray-300 text-gray-400  cursor-pointer rounded-md hover:border-gray-600 hover:text-gray-600 dark:hover:border-gray-200 dark:hover:text-gray-200 transition-all duration-300 w-7 h-7">
-                                        <svg aria-hidden="true" class="dark:hidden" fill="currentColor"
-                                             height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 4c-.6 0-1-.4-1-1V1c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1zM12 24c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1zM5.6 6.6c-.3 0-.5-.1-.7-.3L3.5 4.9c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.1.2-.4.3-.7.3zM19.8 20.8c-.3 0-.5-.1-.7-.3l-1.4-1.4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3zM3 13H1c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM23 13h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM4.2 20.8c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.4.3-.7.3zM18.4 6.6c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.5.3-.7.3z"></path>
-                                        </svg>
-                                        <svg aria-hidden="true" class="hidden dark:block" fill="currentColor"
-                                             height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.1 22h-.9c-5.5-.5-9.5-5.4-9-10.9.4-4.8 4.2-8.6 9-9 .4 0 .8.2 1 .5.2.3.2.8-.1 1.1-2 2.7-1.4 6.4 1.3 8.4 2.1 1.6 5 1.6 7.1 0 .3-.2.7-.3 1.1-.1.3.2.5.6.5 1-.2 2.7-1.5 5.1-3.6 6.8-1.9 1.4-4.1 2.2-6.4 2.2zM9.3 4.4c-2.9 1-5 3.6-5.2 6.8-.4 4.4 2.8 8.3 7.2 8.7 2.1.2 4.2-.4 5.8-1.8 1.1-.9 1.9-2.1 2.4-3.4-2.5.9-5.3.5-7.5-1.1-2.8-2.2-3.9-5.9-2.7-9.2z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="social-links menu-item_93d67 flex-center relative">
-                                <div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2"><a
-                                        class="social-links" href="https://github.com/april-projects"
-                                        rel="noopener noreferrer" target="_blank">
-                                    <div class="social-links-icon_93d67">
-                                        <svg height="24" role="img" viewBox="0 0 24 24" width="24"
-                                             xmlns="http://www.w3.org/2000/svg"><title>GitHub</title>
-                                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                                        </svg>
-                                    </div>
-                                </a><a class="social-links"
-                                       href="https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png" rel="noopener noreferrer" target="_blank">
-                                    <div class="social-links-icon_93d67">
-                                        <svg aria-hidden="true" class="iconify iconify--ri" height="24"
-                                             preserveAspectRatio="xMidYMid meet" role="img"
-                                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M18.574 13.711a.91.91 0 0 0 .898-.898c0-.498-.399-.898-.898-.898s-.898.4-.898.898c0 .5.4.898.898.898zm-4.425 0a.91.91 0 0 0 .898-.898c0-.498-.4-.898-.898-.898c-.5 0-.898.4-.898.898c0 .5.399.898.898.898zm6.567 5.04a.347.347 0 0 0-.172.37c0 .048 0 .097.025.147c.098.417.294 1.081.294 1.106c0 .073.025.122.025.172a.22.22 0 0 1-.221.22c-.05 0-.074-.024-.123-.048l-1.449-.836a.799.799 0 0 0-.344-.098c-.073 0-.147 0-.196.024c-.688.197-1.4.295-2.161.295c-3.66 0-6.607-2.457-6.607-5.505c0-3.047 2.947-5.505 6.607-5.505c3.659 0 6.606 2.458 6.606 5.505c0 1.647-.884 3.146-2.284 4.154zM16.673 8.099a9.105 9.105 0 0 0-.28-.005c-4.174 0-7.606 2.86-7.606 6.505c0 .554.08 1.09.228 1.6h-.089a9.963 9.963 0 0 1-2.584-.368c-.074-.025-.148-.025-.222-.025a.832.832 0 0 0-.418.123l-1.748 1.005c-.05.025-.099.05-.148.05a.273.273 0 0 1-.27-.27c0-.074.024-.123.049-.197c.024-.024.246-.834.369-1.324c0-.05.024-.123.024-.172a.556.556 0 0 0-.221-.442C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3c3.765 0 6.93 2.169 7.723 5.098zm-5.154.418c.573 0 1.026-.477 1.026-1.026c0-.573-.453-1.026-1.026-1.026s-1.026.453-1.026 1.026s.453 1.026 1.026 1.026zm-5.26 0c.573 0 1.027-.477 1.027-1.026c0-.573-.454-1.026-1.027-1.026c-.572 0-1.026.453-1.026 1.026s.454 1.026 1.026 1.026z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                </a><a class="social-links" href="https://www.mobaijun.com" rel="noopener noreferrer"
-                                       target="_blank">
-                                    <div class="social-links-icon_93d67">
-                                        <svg height="24" viewBox="0 0 24 24" width="24"
-                                             xmlns="http://www.w3.org/2000/svg"><title>Lark</title>
-                                            <path d="M8.813 5.477c1.038.836 2.286 2.045 3.3 3.495.171.23.377.576.457.71l.034.056a8.803 8.803 0 0 0-.922 1.3l-.271-.494C9.655 7.53 6.3 5.477 6.137 5.377a.447.447 0 0 1-.006-.004l-.666-.393-.107-.086a.499.499 0 0 1 .306-.885L6.084 4h7.997c.159.006.318.037.47.092.174.064.317.174.458.308.134.143.272.296.403.448.622.675 1.324 1.688 1.324 1.688-.573.193-1.349.736-1.349.736a5.095 5.095 0 0 0-.348-.54 20.665 20.665 0 0 0-1.037-1.255H8.813Z"
-                                                  fill="currentColor"></path>
-                                            <path d="M18.482 7.507a5.42 5.42 0 0 1 4.04.717c.248.168.788.635.242 1.233-1.7 1.67-2.194 3.225-2.63 4.599-.278.873-.541 1.697-1.066 2.424-1.813 2.508-4.114 4-6.837 4.434-.561.089-1.132.131-1.7.131-3.958 0-7.498-2.035-8.75-2.844h.003l-.161-.107c-.534-.378-.61-.723-.623-.989V7.055a.486.486 0 0 1 .827-.317l.482.589c5.082 6.201 9.126 8.063 11.626 8.53 2.246.424 3.631-.165 4.022-.37.333-.51.534-1.143.764-1.865l.006-.021c.406-1.276.898-2.821 2.322-4.477a3.93 3.93 0 0 0-2.28-.168c-1.761.394-3.403 1.96-4.89 4.643a8.27 8.27 0 0 0-.341.671c-.724-.107-1.334-.65-1.334-.65.128-.269.22-.455.345-.672 1.718-3.125 3.714-4.962 5.933-5.441ZM2.477 16.889c1.145.744 5.341 3.232 9.532 2.563 1.56-.247 2.963-.915 4.196-1.99-2.771.254-7.557-.753-13.728-7.666v7.093Z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </div>
-                                </a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobileNavMenu_f6cde">
-                        <div class="navScreen_457e8 " id="navScreen">
-                            <div class="container_457e8">
-                                <div class="navMenu_457e8">
-                                    <div class="navMenuItem_457e8 w-full"><a class="link_03735  cursor-pointer"
-                                                                             href="/guide/index.html" target="">
-                                        <div class="rspress-nav-menu-item singleItem_f6cde  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">
-                                            指南
-                                        </div>
-                                    </a></div>
-                                    <div class="navMenuItem_457e8 w-full"><a class="link_03735  cursor-pointer"
-                                                                             href="/tutorial/index.html" target="">
-                                        <div class="rspress-nav-menu-item singleItem_f6cde activeItem_f6cde text-sm font-medium mx-1.5 px-3 py-2 flex items-center">
-                                            教程
-                                        </div>
-                                    </a></div>
-                                </div>
-                                <div class="flex-center flex-col gap-2">
-                                    <div class="mt-2 navAppearance_457e8 flex justify-center"></div>
-                                    <div class="social-links menu-item_93d67 flex-center relative">
-                                        <div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2">
-                                            <a class="social-links" href="https://github.com/april-projects"
-                                               rel="noopener noreferrer" target="_blank">
-                                                <div class="social-links-icon_93d67">
-                                                    <svg height="24" role="img" viewBox="0 0 24 24" width="24"
-                                                         xmlns="http://www.w3.org/2000/svg"><title>GitHub</title>
-                                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                                                    </svg>
-                                                </div>
-                                            </a><a
-                                                class="social-links"
-                                                href="https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png" rel="noopener noreferrer" target="_blank">
-                                            <div class="social-links-icon_93d67">
-                                                <svg aria-hidden="true" class="iconify iconify--ri" height="24"
-                                                     preserveAspectRatio="xMidYMid meet" role="img"
-                                                     viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M18.574 13.711a.91.91 0 0 0 .898-.898c0-.498-.399-.898-.898-.898s-.898.4-.898.898c0 .5.4.898.898.898zm-4.425 0a.91.91 0 0 0 .898-.898c0-.498-.4-.898-.898-.898c-.5 0-.898.4-.898.898c0 .5.399.898.898.898zm6.567 5.04a.347.347 0 0 0-.172.37c0 .048 0 .097.025.147c.098.417.294 1.081.294 1.106c0 .073.025.122.025.172a.22.22 0 0 1-.221.22c-.05 0-.074-.024-.123-.048l-1.449-.836a.799.799 0 0 0-.344-.098c-.073 0-.147 0-.196.024c-.688.197-1.4.295-2.161.295c-3.66 0-6.607-2.457-6.607-5.505c0-3.047 2.947-5.505 6.607-5.505c3.659 0 6.606 2.458 6.606 5.505c0 1.647-.884 3.146-2.284 4.154zM16.673 8.099a9.105 9.105 0 0 0-.28-.005c-4.174 0-7.606 2.86-7.606 6.505c0 .554.08 1.09.228 1.6h-.089a9.963 9.963 0 0 1-2.584-.368c-.074-.025-.148-.025-.222-.025a.832.832 0 0 0-.418.123l-1.748 1.005c-.05.025-.099.05-.148.05a.273.273 0 0 1-.27-.27c0-.074.024-.123.049-.197c.024-.024.246-.834.369-1.324c0-.05.024-.123.024-.172a.556.556 0 0 0-.221-.442C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3c3.765 0 6.93 2.169 7.723 5.098zm-5.154.418c.573 0 1.026-.477 1.026-1.026c0-.573-.453-1.026-1.026-1.026s-1.026.453-1.026 1.026s.453 1.026 1.026 1.026zm-5.26 0c.573 0 1.027-.477 1.027-1.026c0-.573-.454-1.026-1.027-1.026c-.572 0-1.026.453-1.026 1.026s.454 1.026 1.026 1.026z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </div>
-                                        </a><a class="social-links" href="https://www.mobaijun.com" rel="noopener noreferrer"
-                                               target="_blank">
-                                            <div class="social-links-icon_93d67">
-                                                <svg height="24" viewBox="0 0 24 24" width="24"
-                                                     xmlns="http://www.w3.org/2000/svg"><title>Lark</title>
-                                                    <path d="M8.813 5.477c1.038.836 2.286 2.045 3.3 3.495.171.23.377.576.457.71l.034.056a8.803 8.803 0 0 0-.922 1.3l-.271-.494C9.655 7.53 6.3 5.477 6.137 5.377a.447.447 0 0 1-.006-.004l-.666-.393-.107-.086a.499.499 0 0 1 .306-.885L6.084 4h7.997c.159.006.318.037.47.092.174.064.317.174.458.308.134.143.272.296.403.448.622.675 1.324 1.688 1.324 1.688-.573.193-1.349.736-1.349.736a5.095 5.095 0 0 0-.348-.54 20.665 20.665 0 0 0-1.037-1.255H8.813Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M18.482 7.507a5.42 5.42 0 0 1 4.04.717c.248.168.788.635.242 1.233-1.7 1.67-2.194 3.225-2.63 4.599-.278.873-.541 1.697-1.066 2.424-1.813 2.508-4.114 4-6.837 4.434-.561.089-1.132.131-1.7.131-3.958 0-7.498-2.035-8.75-2.844h.003l-.161-.107c-.534-.378-.61-.723-.623-.989V7.055a.486.486 0 0 1 .827-.317l.482.589c5.082 6.201 9.126 8.063 11.626 8.53 2.246.424 3.631-.165 4.022-.37.333-.51.534-1.143.764-1.865l.006-.021c.406-1.276.898-2.821 2.322-4.477a3.93 3.93 0 0 0-2.28-.168c-1.761.394-3.403 1.96-4.89 4.643a8.27 8.27 0 0 0-.341.671c-.724-.107-1.334-.65-1.334-.65.128-.269.22-.455.345-.672 1.718-3.125 3.714-4.962 5.933-5.441ZM2.477 16.889c1.145.744 5.341 3.232 9.532 2.563 1.56-.247 2.963-.915 4.196-1.99-2.771.254-7.557-.753-13.728-7.666v7.093Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </div>
-                                        </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button aria-label="mobile hamburger" class=" navHamburger_e7b06 text-gray-500">
-                            <svg fill="currentColor" height="32" viewBox="0 0 32 32" width="32"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="8" cy="16" fill="currentColor" r="2"></circle>
-                                <circle cx="16" cy="16" fill="currentColor" r="2"></circle>
-                                <circle cx="24" cy="16" fill="currentColor" r="2"></circle>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <section>
-            <div class="docLayout_edeb4 pt-0">
-                <div class="rspress-sidebar-menu">
-                    <button class="flex-center mr-auto">
-                        <div class="text-md mr-2">
-                            <svg height="1em" viewBox="0 0 32 32" width="1em">
-                                <path d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z" fill="currentColor"></path>
-                            </svg>
-                        </div>
-                        <span class="text-sm">Menu</span></button>
-                    <button class="flex-center ml-auto"><span class="text-sm">ON THIS PAGE</span>
-                        <div class="text-md mr-2"
-                             style="transform:rotate(0deg);transition:transform 0.2s ease-out;margin-top:2px">
-                            <svg height="1em" viewBox="0 0 32 32" width="1em">
-                                <path d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z" fill="currentColor"></path>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                <aside class="sidebar_71eca rspress-sidebar ">
-                    <div class="navTitleMask_71eca">
-                        <div class="navBarTitle_f6cde"><a class="flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"
-                                                          href="/"><img
-                                alt="logo" class="mr-4 rspress-logo dark:hidden" id="logo" src="/logo.png"/><img
-                                alt="logo" class="mr-4 rspress-logo hidden dark:block" id="logo" src="/logo.png"/></a>
-                        </div>
-                    </div>
-                    <div class="rspress-scrollbar sidebarContent_71eca">
-                        <nav class="pb-2"><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/index.html"
-                                             target="">
-                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                 style="font-size:14px;margin-left:0;border-radius:0 var(--rp-radius) var(--rp-radius) 0;padding-left:24px;font-weight:bold">
-                                <span>前言</span></div>
-                        </a>
-                            <section class="mt-0.5 block" style="margin-left:0">
-                                <div class="flex justify-between items-center menuItem_71eca"
-                                     style="border-radius:0 var(--rp-radius) var(--rp-radius) 0;cursor:pointer"><h2
-                                        class="py-2 px-3 text-sm font-medium flex"
-                                        style="font-size:14px;padding-left:24px;font-weight:bold"><span
-                                        class="flex-center">python教程</span></h2>
-                                    <div class="collapseContainer_71eca p-2 rounded-xl">
-                                        <div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(0deg)">
-                                            <svg height="1em" viewBox="0 0 32 32" width="1em">
-                                                <path d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="transition-all duration-300 ease-in-out"
-                                     style="overflow:hidden;max-height:0">
-                                    <div class="rspress-sidebar-group transition-opacity duration-500 ease-in-out"
-                                         style="opacity:0;margin-left:12px">
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/index.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>简介</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第01课：初识Python.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第01课：初识Python</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第02课：第一个Python程序.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第02课：第一个Python程序</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第03课：Python语言中的变量.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第03课：Python语言中的变量</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第04课：Python语言中的运算符.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第04课：Python语言中的运算符</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第05课：分支结构.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第05课：分支结构</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第06课：循环结构.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第06课：循环结构</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第07课：分支和循环结构的应用.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第07课：分支和循环结构的应用</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第08课：常用数据结构之列表-1.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第08课：常用数据结构之列表-1</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第09课：常用数据结构之列表-2.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第09课：常用数据结构之列表-2</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第10课：常用数据结构之元组.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第10课：常用数据结构之元组</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第11课：常用数据结构之字符串.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第11课：常用数据结构之字符串</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第12课：常用数据结构之集合.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第12课：常用数据结构之集合</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第13课：常用数据结构之字典.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第13课：常用数据结构之字典</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第14课：函数和模块.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第14课：函数和模块</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第15课：函数的应用.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第15课：函数的应用</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第16课：函数使用进阶.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第16课：函数使用进阶</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第17课：函数高级应用.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第17课：函数高级应用</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第18课：面向对象编程入门.html"
-                                                target="">
-                                            <div class="menuItemActive_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第18课：面向对象编程入门</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第19课：面向对象编程进阶.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第19课：面向对象编程进阶</span></div>
-                                        </a></div>
-                                        <div><a class="link_03735 menuLink_71eca cursor-pointer" href="/tutorial/python/第20课：面向对象编程应用.html"
-                                                target="">
-                                            <div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex"
-                                                 style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0">
-                                                <span>第20课：面向对象编程应用</span></div>
-                                        </a></div>
-                                    </div>
-                                </div>
-                            </section>
-                        </nav>
-                    </div>
-                </aside>
-                <div class="content_edeb4 rspress-doc-container flex flex-shrink-0 mx-auto">
-                    <div class="w-full flex-1">
-                        <div>
-                            <div class="rspress-doc"><!--$--><h2 class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_3b154"
-                                                                 id="第18课面向对象编程入门">
-                                第18课：面向对象编程入门<a aria-hidden="true" class="link_3b154 header-anchor"
-                                                          href="#第18课面向对象编程入门">#</a></h2>
-                                <p class="my-4 leading-7">面向对象编程是一种非常流行的<strong
-                                        class="font-semibold">编程范式</strong>（programming
-                                    paradigm），所谓编程范式就是<strong class="font-semibold">程序设计的方法论</strong>，简单的说就是程序员对程序的认知和理解以及他们编写代码的方式。
-                                </p>
-                                <p class="my-4 leading-7">在前面的课程中，我们说过“<strong
-                                        class="font-semibold">程序是指令的集合</strong>”，运行程序时，程序中的语句会变成一条或多条指令，然后由CPU（中央处理器）去执行。为了简化程序的设计，我们又讲到了函数，<strong
-                                        class="font-semibold">把相对独立且经常重复使用的代码放置到函数中</strong>，在需要使用这些代码的时候调用函数即可。如果一个函数的功能过于复杂和臃肿，我们又可以进一步<strong
-                                        class="font-semibold">将函数进一步拆分为多个子函数</strong>来降低系统的复杂性。
-                                </p>
-                                <p class="my-4 leading-7">
-                                    不知大家是否发现，编程其实是写程序的人按照计算机的工作方式通过代码控制机器完成任务。但是，计算机的工作方式与人类正常的思维模式是不同的，如果编程就必须抛弃人类正常的思维方式去迎合计算机，编程的乐趣就少了很多。这里，我想说的并不是我们不能按照计算机的工作方式去编写代码，但是当我们需要开发一个复杂的系统时，这种方式会让代码过于复杂，从而导致开发和维护工作都变得举步维艰。</p>
-                                <p class="my-4 leading-7">
-                                    随着软件复杂性的增加，编写正确可靠的代码会变成了一项极为艰巨的任务，这也是很多人都坚信“软件开发是人类改造世界所有活动中最为复杂的活动”的原因。如何用程序描述复杂系统和解决复杂问题，就成为了所有程序员必须要思考和直面的问题。诞生于上世纪70年代的
-                                    Smalltalk 语言让软件开发者看到了希望，因为它引入了一种新的编程范式叫面向对象编程。在面向对象编程的世界里，程序中的<strong
-                                        class="font-semibold">数据和操作数据的函数是一个逻辑上的整体</strong>，我们称之为<strong
-                                        class="font-semibold">对象</strong>，<strong
-                                        class="font-semibold">对象可以接收消息</strong>，解决问题的方法就是<strong
-                                        class="font-semibold">创建对象并向对象发出各种各样的消息</strong>；通过消息传递，程序中的多个对象可以协同工作，这样就能构造出复杂的系统并解决现实中的问题。当然，面向对象编程的雏形还可以向前追溯到更早期的Simula语言，但这不是我们要讨论的重点。
-                                </p>
-                                <blockquote
-                                        class="border-l-2 border-solid border-divider pl-4 my-6 transition-colors duration-500 blockquote_3b154">
-                                    <p class="my-4 leading-7"><strong class="font-semibold">说明：</strong>
-                                        今天我们使用的很多高级程序设计语言都支持面向对象编程，但是面向对象编程也不是解决软件开发中所有问题的“银弹”，或者说在软件开发这个行业目前还没有所谓的“银弹”。关于这个问题，大家可以参考
-                                        IBM360 系统之父弗雷德里克·布鲁克斯所发表的论文《没有银弹：软件工程的本质性与附属性工作》或软件工程的经典著作《人月神话》一书。
-                                    </p>
-                                </blockquote>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="类和对象">类和对象<a
-                                        aria-hidden="true" class="link_3b154 header-anchor" href="#类和对象">#</a></h3>
-                                <p class="my-4 leading-7">
-                                    如果要用一句话来概括面向对象编程，我认为下面的说法是相当精辟和准确的。</p>
-                                <blockquote
-                                        class="border-l-2 border-solid border-divider pl-4 my-6 transition-colors duration-500 blockquote_3b154">
-                                    <p class="my-4 leading-7"><strong class="font-semibold">面向对象编程</strong>：把一组数据和处理数据的方法组成<strong
-                                            class="font-semibold">对象</strong>，把行为相同的对象归纳为<strong
-                                            class="font-semibold">类</strong>，通过<strong
-                                            class="font-semibold">封装</strong>隐藏对象的内部细节，通过<strong
-                                            class="font-semibold">继承</strong>实现类的特化和泛化，通过<strong
-                                            class="font-semibold">多态</strong>实现基于对象类型的动态分派。</p>
-                                </blockquote>
-                                <p class="my-4 leading-7">这句话对初学者来说可能不那么容易理解，但是我可以先为大家圈出几个关键词：<strong
-                                        class="font-semibold">对象</strong>（object）、<strong
-                                        class="font-semibold">类</strong>（class）、<strong
-                                        class="font-semibold">封装</strong>（encapsulation）、<strong
-                                        class="font-semibold">继承</strong>（inheritance）、<strong class="font-semibold">多态</strong>（polymorphism）。
-                                </p>
-                                <p class="my-4 leading-7">我们先说说类和对象这两个词。在面向对象编程中，<strong
-                                        class="font-semibold">类是一个抽象的概念，对象是一个具体的概念</strong>。我们把同一类对象的共同特征抽取出来就是一个类，比如我们经常说的人类，这是一个抽象概念，而我们每个人就是人类的这个抽象概念下的实实在在的存在，也就是一个对象。简而言之，<strong
-                                        class="font-semibold">类是对象的蓝图和模板，对象是类的实例，是可以接受消息的实体</strong>。
-                                </p>
-                                <p class="my-4 leading-7">在面向对象编程的世界中，<strong
-                                        class="font-semibold">一切皆为对象</strong>，<strong class="font-semibold">对象都有属性和行为</strong>，<strong
-                                        class="font-semibold">每个对象都是独一无二的</strong>，而且<strong
-                                        class="font-semibold">对象一定属于某个类</strong>。对象的属性是对象的静态特征，对象的行为是对象的动态特征。按照上面的说法，如果我们把拥有共同特征的对象的属性和行为都抽取出来，就可以定义出一个类。
-                                </p>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="定义类">定义类<a
-                                        aria-hidden="true" class="link_3b154 header-anchor" href="#定义类">#</a></h3>
-                                <p class="my-4 leading-7">在 Python 语言中，我们可以使用<code>class</code>关键字加上类名来定义类，通过缩进我们可以确定类的代码块，就如同定义函数那样。在类的代码块中，我们需要写一些函数，我们说过类是一个抽象概念，那么这些函数就是我们对一类对象共同的动态特征的提取。写在类里面的函数我们通常称之为<strong
-                                        class="font-semibold">方法</strong>，方法就是对象的行为，也就是对象可以接收的消息。方法的第一个参数通常都是<code>self</code>，它代表了接收这个消息的对象本身。
-                                </p>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>class Student:
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>    def study(self, course_name):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>        print(f&#x27;学生正在学习{course_name}.&#x27;)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>    def play(self):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>        print(f&#x27;学生正在玩游戏.&#x27;)</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="创建和使用对象">
-                                    创建和使用对象<a aria-hidden="true" class="link_3b154 header-anchor"
-                                                     href="#创建和使用对象">#</a></h3>
-                                <p class="my-4 leading-7">
-                                    在我们定义好一个类之后，可以使用构造器语法来创建对象，代码如下所示。</p>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>stu1 = Student()
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>stu2 = Student()
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>print(stu1)    # &lt;__main__.Student object at 0x10ad5ac50&gt;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>print(stu2)    # &lt;__main__.Student object at 0x10ad5acd0&gt;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>print(hex(id(stu1)), hex(id(stu2)))    # 0x10ad5ac50 0x10ad5acd0</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="my-4 leading-7">在类的名字后跟上圆括号就是所谓的构造器语法，上面的代码创建了两个学生对象，一个赋值给变量<code>stu1</code>，一个赋值给变量<code>stu2</code>。当我们用<code>print</code>函数打印<code>stu1</code>和<code>stu2</code>两个变量时，我们会看到输出了对象在内存中的地址（十六进制形式），跟我们用<code>id</code>函数查看对象标识获得的值是相同的。现在我们可以告诉大家，我们定义的变量其实保存的是一个对象在内存中的逻辑地址（位置），通过这个逻辑地址，我们就可以在内存中找到这个对象。所以<code>stu3
-                                    = stu2</code>这样的赋值语句并没有创建新的对象，只是用一个新的变量保存了已有对象的地址。
-                                </p>
-                                <p class="my-4 leading-7">接下来，我们尝试给对象发消息，即调用对象的方法。刚才的<code>Student</code>类中我们定义了<code>study</code>和<code>play</code>两个方法，两个方法的第一个参数<code>self</code>代表了接收消息的学生对象，<code>study</code>方法的第二个参数是学习的课程名称。Python中，给对象发消息有两种方式，请看下面的代码。
-                                </p>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span># 通过“类.方法”调用方法
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span># 第一个参数是接收消息的对象
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span># 第二个参数是学习的课程名称
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>Student.study(stu1, &#x27;Python程序设计&#x27;)    # 学生正在学习Python程序设计.
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span># 通过“对象.方法”调用方法
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span># 点前面的对象就是接收消息的对象
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span># 只需要传入第二个参数课程名称
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>stu1.study(&#x27;Python程序设计&#x27;)             # 学生正在学习Python程序设计.
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>Student.play(stu2)                      # 学生正在玩游戏.
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>stu2.play()                             # 学生正在玩游戏.</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="初始化方法">初始化方法<a
-                                        aria-hidden="true" class="link_3b154 header-anchor" href="#初始化方法">#</a>
-                                </h3>
-                                <p class="my-4 leading-7">大家可能已经注意到了，刚才我们创建的学生对象只有行为没有属性，如果要给学生对象定义属性，我们可以修改<code>Student</code>类，为其添加一个名为<code>__init__</code>的方法。在我们调用<code>Student</code>类的构造器创建对象时，首先会在内存中获得保存学生对象所需的内存空间，然后通过自动执行<code>__init__</code>方法，完成对内存的初始化操作，也就是把数据放到内存空间中。所以我们可以通过给<code>Student</code>类添加<code>__init__</code>方法的方式为学生对象指定属性，同时完成对属性赋初始值的操作，正因如此，<code>__init__</code>方法通常也被称为初始化方法。
-                                </p>
-                                <p class="my-4 leading-7">
-                                    我们对上面的<code>Student</code>类稍作修改，给学生对象添加<code>name</code>（姓名）和<code>age</code>（年龄）两个属性。
-                                </p>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>class Student:
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>    &quot;&quot;&quot;学生&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>    def __init__(self, name, age):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>        &quot;&quot;&quot;初始化方法&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>        self.name = name
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>        self.age = age
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>    def study(self, course_name):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>        &quot;&quot;&quot;学习&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>        print(f&#x27;{self.name}正在学习{course_name}.&#x27;)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">12</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">13</span>    def play(self):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">14</span>        &quot;&quot;&quot;玩耍&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">15</span>        print(f&#x27;{self.name}正在玩游戏.&#x27;)</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="my-4 leading-7">
-                                    修改刚才创建对象和给对象发消息的代码，重新执行一次，看看程序的执行结果有什么变化。</p>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span># 调用Student类的构造器创建对象并传入初始化参数
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>stu1 = Student(&#x27;骆昊&#x27;, 44)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>stu2 = Student(&#x27;王大锤&#x27;, 25)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>stu1.study(&#x27;Python程序设计&#x27;)    # 骆昊正在学习Python程序设计.
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>stu2.play()                    # 王大锤正在玩游戏.</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="面向对象的支柱">
-                                    面向对象的支柱<a aria-hidden="true" class="link_3b154 header-anchor"
-                                                     href="#面向对象的支柱">#</a></h3>
-                                <p class="my-4 leading-7">面向对象编程有三大支柱，就是我们之前给大家划重点的时候圈出的三个词：<strong
-                                        class="font-semibold">封装</strong>、<strong class="font-semibold">继承</strong>和<strong
-                                        class="font-semibold">多态</strong>。后面两个概念在下一节课中会详细说明，这里我们先说一下什么是封装。我自己对封装的理解是：<strong
-                                        class="font-semibold">隐藏一切可以隐藏的实现细节，只向外界暴露简单的调用接口</strong>。我们在类中定义的对象方法其实就是一种封装，这种封装可以让我们在创建对象之后，只需要给对象发送一个消息就可以执行方法中的代码，也就是说我们在只知道方法的名字和参数（方法的外部视图），不知道方法内部实现细节（方法的内部视图）的情况下就完成了对方法的使用。
-                                </p>
-                                <p class="my-4 leading-7">
-                                    举一个例子，假如要控制一个机器人帮我倒杯水，如果不使用面向对象编程，不做任何的封装，那么就需要向这个机器人发出一系列的指令，如站起来、向左转、向前走5步、拿起面前的水杯、向后转、向前走10步、弯腰、放下水杯、按下出水按钮、等待10秒、松开出水按钮、拿起水杯、向右转、向前走5步、放下水杯等，才能完成这个简单的操作，想想都觉得麻烦。按照面向对象编程的思想，我们可以将倒水的操作封装到机器人的一个方法中，当需要机器人帮我们倒水的时候，只需要向机器人对象发出倒水的消息就可以了，这样做不是更好吗？</p>
-                                <p class="my-4 leading-7">
-                                    在很多场景下，面向对象编程其实就是一个三步走的问题。第一步定义类，第二步创建对象，第三步给对象发消息。当然，有的时候我们是不需要第一步的，因为我们想用的类可能已经存在了。之前我们说过，Python内置的<code>list</code>、<code>set</code>、<code>dict</code>其实都是类，如果要创建列表、集合、字典对象，我们就不用自定义类了。当然，有的类并不是
-                                    Python
-                                    标准库中直接提供的，它可能来自于第三方的代码，如何安装和使用三方代码在后续课程中会进行讨论。在某些特殊的场景中，我们会用到名为“内置对象”的对象，所谓“内置对象”就是说上面三步走的第一步和第二步都不需要了，因为类已经存在而且对象已然创建过了，直接向对象发消息就可以了，这也就是我们常说的“开箱即用”。
-                                </p>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="面向对象案例">面向对象案例<a
-                                        aria-hidden="true" class="link_3b154 header-anchor" href="#面向对象案例">#</a>
-                                </h3>
-                                <h4 class="mt-8 leading-6 text-base title_3b154" id="案例1定义一个类描述数字时钟">
-                                    案例1：定义一个类描述数字时钟。<a aria-hidden="true" class="link_3b154 header-anchor"
-                                                                    href="#案例1定义一个类描述数字时钟">#</a></h4>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>import time
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span># 定义时钟类
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>class Clock:
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>    &quot;&quot;&quot;数字时钟&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>    def __init__(self, hour=0, minute=0, second=0):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>        &quot;&quot;&quot;初始化方法
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>        :param hour: 时
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>        :param minute: 分
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">12</span>        :param second: 秒
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">13</span>        &quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">14</span>        self.hour = hour
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">15</span>        self.min = minute
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">16</span>        self.sec = second
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">17</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">18</span>    def run(self):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">19</span>        &quot;&quot;&quot;走字&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">20</span>        self.sec += 1
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">21</span>        if self.sec == 60:
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">22</span>            self.sec = 0
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">23</span>            self.min += 1
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">24</span>            if self.min == 60:
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">25</span>                self.min = 0
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">26</span>                self.hour += 1
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">27</span>                if self.hour == 24:
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">28</span>                    self.hour = 0
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">29</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">30</span>    def show(self):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">31</span>        &quot;&quot;&quot;显示时间&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">32</span>        return f&#x27;{self.hour:0&gt;2d}:{self.min:0&gt;2d}:{self.sec:0&gt;2d}&#x27;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">33</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">34</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">35</span># 创建时钟对象
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">36</span>clock = Clock(23, 59, 58)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">37</span>while True:
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">38</span>    # 给时钟对象发消息读取时间
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">39</span>    print(clock.show())
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">40</span>    # 休眠1秒钟
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">41</span>    time.sleep(1)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">42</span>    # 给时钟对象发消息使其走字
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">43</span>    clock.run()</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h4 class="mt-8 leading-6 text-base title_3b154"
-                                    id="案例2定义一个类描述平面上的点要求提供计算到另一个点距离的方法">案例2：定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。<a
-                                        aria-hidden="true" class="link_3b154 header-anchor"
-                                        href="#案例2定义一个类描述平面上的点要求提供计算到另一个点距离的方法">#</a></h4>
-                                <div class="language-Python">
-                                    <div class="rspress-code-content rspress-scrollbar">
-                                        <div><pre class="code" style="background-color:inherit"><code
-                                                class="language-Python" style="white-space:pre-wrap"><span
-                                                style="display:flex;padding:0 1.25rem"><span
-                                                class="linenumber react-syntax-highlighter-line-number"
-                                                style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>class Point:
-</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                                 style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>    &quot;&quot;&quot;平面上的点&quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>    def __init__(self, x=0, y=0):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>        &quot;&quot;&quot;初始化方法
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>        :param x: 横坐标
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>        :param y: 纵坐标
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>        &quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>        self.x, self.y = x, y
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>    def distance_to(self, other):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">12</span>        &quot;&quot;&quot;计算与另一个点的距离
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">13</span>        :param other: 另一个点
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">14</span>        &quot;&quot;&quot;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">15</span>        dx = self.x - other.x
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">16</span>        dy = self.y - other.y
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">17</span>        return (dx * dx + dy * dy) ** 0.5
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">18</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">19</span>    def __str__(self):
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">20</span>        return f&#x27;({self.x}, {self.y})&#x27;
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">21</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">22</span>
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">23</span>p1 = Point(3, 5)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">24</span>p2 = Point(6, 9)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">25</span>print(p1)  # 调用对象的__str__魔法方法
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">26</span>print(p2)
-</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number"
-                                                          style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">27</span>print(p1.distance_to(p2))</span></code></pre>
-                                        </div>
-                                        <div class="code-button-group_15153">
-                                            <button>
-                                                <svg class="icon-wrapped_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"
-                                                          fill="#22a041"></path>
-                                                </svg>
-                                                <svg class="icon-wrap_15153" height="32" viewBox="0 0 24 24"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                            </button>
-                                            <button class="code-copy-button_15153">
-                                                <svg class="icon-copy_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"
-                                                          fill="currentColor"></path>
-                                                    <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"
-                                                          fill="currentColor"></path>
-                                                </svg>
-                                                <svg class="icon-success_15153" height="32" viewBox="0 0 30 30"
-                                                     width="32">
-                                                    <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"
-                                                          fill="#49cd37"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h3 class="mt-10 mb-2 leading-7 text-xl title_3b154" id="总结">总结<a
-                                        aria-hidden="true" class="link_3b154 header-anchor" href="#总结">#</a></h3>
-                                <p class="my-4 leading-7">面向对象编程是一种非常流行的编程范式，除此之外还有<strong
-                                        class="font-semibold">指令式编程</strong>、<strong
-                                        class="font-semibold">函数式编程</strong>等编程范式。由于现实世界是由对象构成的，而对象是可以接收消息的实体，所以<strong
-                                        class="font-semibold">面向对象编程更符合人类正常的思维习惯</strong>。类是抽象的，对象是具体的，有了类就能创建对象，有了对象就可以接收消息，这就是面向对象编程的基础。定义类的过程是一个抽象的过程，找到对象公共的属性属于数据抽象，找到对象公共的方法属于行为抽象。抽象的过程是一个仁者见仁智者见智的过程，对同一类对象进行抽象可能会得到不同的结果，如下图所示。
-                                </p>
-                                <blockquote
-                                        class="border-l-2 border-solid border-divider pl-4 my-6 transition-colors duration-500 blockquote_3b154">
-                                    <p class="my-4 leading-7"><strong class="font-semibold">说明：</strong> 本节课的插图来自于
-                                        Grady Booc 等撰写的《面向对象分析与设计》一书，该书是讲解面向对象编程的经典著作，有兴趣的读者可以购买和阅读这本书来了解更多的面向对象的相关知识。
-                                    </p>
-                                </blockquote><!--/$--></div>
-                            <div class="rspress-doc-footer">
-                                <footer class="mt-8">
-                                    <div class="xs:flex pb-5 px-2 justify-end items-center"></div>
-                                    <div class="flex flex-col"></div>
-                                    <div class="flex flex-col sm:flex-row sm:justify-around gap-4 pt-6">
-                                        <div class="prev_e7091 flex flex-col"><a
-                                                class="link_03735 pager-link_9b9a7 cursor-pointer" href="/tutorial/python/第17课：函数高级应用.html"
-                                                target=""><span
-                                                class="desc_9b9a7">Previous Page</span><span class="title_9b9a7">第17课：函数高级应用</span></a>
-                                        </div>
-                                        <div class="next_e7091 flex flex-col"><a
-                                                class="link_03735 pager-link_9b9a7 next_9b9a7 cursor-pointer" href="/tutorial/python/第19课：面向对象编程进阶.html"
-                                                target=""><span
-                                                class="desc_9b9a7">Next page</span><span class="title_9b9a7">第19课：面向对象编程进阶</span></a>
-                                        </div>
-                                    </div>
-                                </footer>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aside-container_edeb4">
-                        <div>
-                            <div class="flex flex-col">
-                                <div class="&lt;lg:hidden">
-                                    <div class="relative text-sm font-medium" id="aside-container">
-                                        <div class="leading-7 block text-sm font-semibold pl-3">ON THIS PAGE</div>
-                                        <nav class="mt-1">
-                                            <ul class="relative">
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#第18课面向对象编程入门"
-                                                       style="padding-left:0;font-weight:semibold"
-                                                       title="第18课：面向对象编程入门"><span
-                                                        class="aside-link-text block">第18课：面向对象编程入门</span></a>
-                                                </li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#类和对象"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="类和对象"><span
-                                                        class="aside-link-text block">类和对象</span></a></li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#定义类"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="定义类"><span
-                                                        class="aside-link-text block">定义类</span></a></li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#创建和使用对象"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="创建和使用对象"><span
-                                                        class="aside-link-text block">创建和使用对象</span></a></li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#初始化方法"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="初始化方法"><span
-                                                        class="aside-link-text block">初始化方法</span></a></li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#面向对象的支柱"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="面向对象的支柱"><span
-                                                        class="aside-link-text block">面向对象的支柱</span></a></li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#面向对象案例"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="面向对象案例"><span
-                                                        class="aside-link-text block">面向对象案例</span></a></li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block"
-                                                       href="#案例1定义一个类描述数字时钟"
-                                                       style="padding-left:24px;font-weight:semibold"
-                                                       title="案例1：定义一个类描述数字时钟。"><span
-                                                        class="aside-link-text block">案例1：定义一个类描述数字时钟。</span></a>
-                                                </li>
-                                                <li>
-                                                    <a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block"
-                                                       href="#案例2定义一个类描述平面上的点要求提供计算到另一个点距离的方法"
-                                                       style="padding-left:24px;font-weight:semibold"
-                                                       title="案例2：定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。"><span
-                                                            class="aside-link-text block">案例2：定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。</span></a>
-                                                </li>
-                                                <li><a class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" href="#总结"
-                                                       style="padding-left:12px;font-weight:semibold"
-                                                       title="总结"><span
-                                                        class="aside-link-text block">总结</span></a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<div id="search-container"></div>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Rspress v1.22.0"><title data-rh="true">April-官网文档</title><meta data-rh="true" name="description" content="April 官方文档"/><script>{const e=localStorage.getItem("rspress-theme-appearance"),t=window.matchMedia("(prefers-color-scheme: dark)").matches,a=e&&"auto"!==e?"dark"===e:t;document.documentElement.classList.toggle("dark",a),document.documentElement.style.colorScheme=a?"dark":"light"}</script><title>April-官网文档</title><link rel="icon" href="/favicon.png"><script defer="defer" src="/static/js/styles.a2ca1e04.js"></script><script defer="defer" src="/static/js/lib-lodash.70aa1ffa.js"></script><script defer="defer" src="/static/js/lib-polyfill.324e9ec3.js"></script><script defer="defer" src="/static/js/lib-react.3fa31774.js"></script><script defer="defer" src="/static/js/lib-router.8cdf1b18.js"></script><script defer="defer" src="/static/js/index.e5d8b2cc.js"></script><link href="/static/css/styles.8aadd70d.css" rel="stylesheet"><script>window.RSPRESS_THEME="dark"</script></head><body ><div id="root"><div><div class="navContainer_f6cde rspress-nav px-6 " style="position:sticky"><div class="container_f6cde flex justify-between items-center h-full"><div class="navBarTitle_f6cde"><a href="/" class="flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"><img src="/logo.png" alt="logo" id="logo" class="mr-4 rspress-logo dark:hidden"/><img src="/logo.png" alt="logo" id="logo" class="mr-4 rspress-logo hidden dark:block"/><span>April 项目组</span></a></div><div class="flex flex-1 justify-end items-center"><div class="rightNav_f6cde"><div class="flex sm:flex-1 items-center sm:pl-4 sm:pr-2"><div class="rspress-nav-search-button navSearchButton_6e282"><button><svg width="18" height="18" viewBox="0 0 32 32"><path fill="var(--rp-c-gray)" d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9Z"></path></svg><p class="searchWord_6e282">搜索</p><div style="opacity:0"><span></span><span>K</span></div></button></div><div class="mobileNavSearchButton_6e282"><svg width="24" height="24" viewBox="0 0 32 32"><path fill="var(--rp-c-gray)" d="m29 27.586-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9 9.01 9.01 0 0 1-9-9Z"></path></svg></div></div><div class="rspress-nav-menu menu h-14"><a class="link_03735  cursor-pointer" target="" href="/guide/index.html"><div class="rspress-nav-menu-item singleItem_f6cde  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">指南</div></a><a class="link_03735  cursor-pointer" target="" href="/tutorial/index.html"><div class="rspress-nav-menu-item singleItem_f6cde activeItem_f6cde text-sm font-medium mx-1.5 px-3 py-2 flex items-center">教程</div></a><a href="https://api.mobaijun.com" target="_blank" rel="noopener noreferrer" class="link_03735 "><div class="rspress-nav-menu-item singleItem_f6cde  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">API</div></a></div><div class="flex-center flex-row"><div class="mx-2"><div class="md:mr-2 rspress-nav-appearance"><div class="p-1 border border-solid border-gray-300 text-gray-400  cursor-pointer rounded-md hover:border-gray-600 hover:text-gray-600 dark:hover:border-gray-200 dark:hover:text-gray-200 transition-all duration-300 w-7 h-7"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" class="dark:hidden" width="18" height="18" fill="currentColor"><path d="M12 18c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6zm0-10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 4c-.6 0-1-.4-1-1V1c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1zM12 24c-.6 0-1-.4-1-1v-2c0-.6.4-1 1-1s1 .4 1 1v2c0 .6-.4 1-1 1zM5.6 6.6c-.3 0-.5-.1-.7-.3L3.5 4.9c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.1.2-.4.3-.7.3zM19.8 20.8c-.3 0-.5-.1-.7-.3l-1.4-1.4c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4-.2.2-.5.3-.7.3zM3 13H1c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM23 13h-2c-.6 0-1-.4-1-1s.4-1 1-1h2c.6 0 1 .4 1 1s-.4 1-1 1zM4.2 20.8c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.4.3-.7.3zM18.4 6.6c-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.4-1.4c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-1.4 1.4c-.2.2-.5.3-.7.3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 24 24" class="hidden dark:block" width="18" height="18" fill="currentColor"><path d="M12.1 22h-.9c-5.5-.5-9.5-5.4-9-10.9.4-4.8 4.2-8.6 9-9 .4 0 .8.2 1 .5.2.3.2.8-.1 1.1-2 2.7-1.4 6.4 1.3 8.4 2.1 1.6 5 1.6 7.1 0 .3-.2.7-.3 1.1-.1.3.2.5.6.5 1-.2 2.7-1.5 5.1-3.6 6.8-1.9 1.4-4.1 2.2-6.4 2.2zM9.3 4.4c-2.9 1-5 3.6-5.2 6.8-.4 4.4 2.8 8.3 7.2 8.7 2.1.2 4.2-.4 5.8-1.8 1.1-.9 1.9-2.1 2.4-3.4-2.5.9-5.3.5-7.5-1.1-2.8-2.2-3.9-5.9-2.7-9.2z"></path></svg></div></div></div><div class="social-links menu-item_93d67 flex-center relative"><div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2"><a href="https://github.com/april-projects" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_93d67"><svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></div></a><a href="https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_93d67"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--ri" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M18.574 13.711a.91.91 0 0 0 .898-.898c0-.498-.399-.898-.898-.898s-.898.4-.898.898c0 .5.4.898.898.898zm-4.425 0a.91.91 0 0 0 .898-.898c0-.498-.4-.898-.898-.898c-.5 0-.898.4-.898.898c0 .5.399.898.898.898zm6.567 5.04a.347.347 0 0 0-.172.37c0 .048 0 .097.025.147c.098.417.294 1.081.294 1.106c0 .073.025.122.025.172a.22.22 0 0 1-.221.22c-.05 0-.074-.024-.123-.048l-1.449-.836a.799.799 0 0 0-.344-.098c-.073 0-.147 0-.196.024c-.688.197-1.4.295-2.161.295c-3.66 0-6.607-2.457-6.607-5.505c0-3.047 2.947-5.505 6.607-5.505c3.659 0 6.606 2.458 6.606 5.505c0 1.647-.884 3.146-2.284 4.154zM16.673 8.099a9.105 9.105 0 0 0-.28-.005c-4.174 0-7.606 2.86-7.606 6.505c0 .554.08 1.09.228 1.6h-.089a9.963 9.963 0 0 1-2.584-.368c-.074-.025-.148-.025-.222-.025a.832.832 0 0 0-.418.123l-1.748 1.005c-.05.025-.099.05-.148.05a.273.273 0 0 1-.27-.27c0-.074.024-.123.049-.197c.024-.024.246-.834.369-1.324c0-.05.024-.123.024-.172a.556.556 0 0 0-.221-.442C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3c3.765 0 6.93 2.169 7.723 5.098zm-5.154.418c.573 0 1.026-.477 1.026-1.026c0-.573-.453-1.026-1.026-1.026s-1.026.453-1.026 1.026s.453 1.026 1.026 1.026zm-5.26 0c.573 0 1.027-.477 1.027-1.026c0-.573-.454-1.026-1.027-1.026c-.572 0-1.026.453-1.026 1.026s.454 1.026 1.026 1.026z"></path></svg></div></a><a href="https://www.mobaijun.com" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_93d67"><svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Lark</title><path d="M8.813 5.477c1.038.836 2.286 2.045 3.3 3.495.171.23.377.576.457.71l.034.056a8.803 8.803 0 0 0-.922 1.3l-.271-.494C9.655 7.53 6.3 5.477 6.137 5.377a.447.447 0 0 1-.006-.004l-.666-.393-.107-.086a.499.499 0 0 1 .306-.885L6.084 4h7.997c.159.006.318.037.47.092.174.064.317.174.458.308.134.143.272.296.403.448.622.675 1.324 1.688 1.324 1.688-.573.193-1.349.736-1.349.736a5.095 5.095 0 0 0-.348-.54 20.665 20.665 0 0 0-1.037-1.255H8.813Z" fill="currentColor"></path><path d="M18.482 7.507a5.42 5.42 0 0 1 4.04.717c.248.168.788.635.242 1.233-1.7 1.67-2.194 3.225-2.63 4.599-.278.873-.541 1.697-1.066 2.424-1.813 2.508-4.114 4-6.837 4.434-.561.089-1.132.131-1.7.131-3.958 0-7.498-2.035-8.75-2.844h.003l-.161-.107c-.534-.378-.61-.723-.623-.989V7.055a.486.486 0 0 1 .827-.317l.482.589c5.082 6.201 9.126 8.063 11.626 8.53 2.246.424 3.631-.165 4.022-.37.333-.51.534-1.143.764-1.865l.006-.021c.406-1.276.898-2.821 2.322-4.477a3.93 3.93 0 0 0-2.28-.168c-1.761.394-3.403 1.96-4.89 4.643a8.27 8.27 0 0 0-.341.671c-.724-.107-1.334-.65-1.334-.65.128-.269.22-.455.345-.672 1.718-3.125 3.714-4.962 5.933-5.441ZM2.477 16.889c1.145.744 5.341 3.232 9.532 2.563 1.56-.247 2.963-.915 4.196-1.99-2.771.254-7.557-.753-13.728-7.666v7.093Z" fill="currentColor"></path></svg></div></a></div></div></div></div><div class="mobileNavMenu_f6cde"><div class="navScreen_457e8 " id="navScreen"><div class="container_457e8"><div class="navMenu_457e8"><div class="navMenuItem_457e8 w-full"><a class="link_03735  cursor-pointer" target="" href="/guide/index.html"><div class="rspress-nav-menu-item singleItem_f6cde  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">指南</div></a></div><div class="navMenuItem_457e8 w-full"><a class="link_03735  cursor-pointer" target="" href="/tutorial/index.html"><div class="rspress-nav-menu-item singleItem_f6cde activeItem_f6cde text-sm font-medium mx-1.5 px-3 py-2 flex items-center">教程</div></a></div><div class="navMenuItem_457e8 w-full"><a href="https://api.mobaijun.com" target="_blank" rel="noopener noreferrer" class="link_03735 "><div class="rspress-nav-menu-item singleItem_f6cde  text-sm font-medium mx-1.5 px-3 py-2 flex items-center">API</div></a></div></div><div class="flex-center flex-col gap-2"><div class="mt-2 navAppearance_457e8 flex justify-center"></div><div class="social-links menu-item_93d67 flex-center relative"><div class="flex-center h-full gap-x-4 transition-colors duration-300 md:mr-2"><a href="https://github.com/april-projects" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_93d67"><svg role="img" viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg></div></a><a href="https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_93d67"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--ri" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M18.574 13.711a.91.91 0 0 0 .898-.898c0-.498-.399-.898-.898-.898s-.898.4-.898.898c0 .5.4.898.898.898zm-4.425 0a.91.91 0 0 0 .898-.898c0-.498-.4-.898-.898-.898c-.5 0-.898.4-.898.898c0 .5.399.898.898.898zm6.567 5.04a.347.347 0 0 0-.172.37c0 .048 0 .097.025.147c.098.417.294 1.081.294 1.106c0 .073.025.122.025.172a.22.22 0 0 1-.221.22c-.05 0-.074-.024-.123-.048l-1.449-.836a.799.799 0 0 0-.344-.098c-.073 0-.147 0-.196.024c-.688.197-1.4.295-2.161.295c-3.66 0-6.607-2.457-6.607-5.505c0-3.047 2.947-5.505 6.607-5.505c3.659 0 6.606 2.458 6.606 5.505c0 1.647-.884 3.146-2.284 4.154zM16.673 8.099a9.105 9.105 0 0 0-.28-.005c-4.174 0-7.606 2.86-7.606 6.505c0 .554.08 1.09.228 1.6h-.089a9.963 9.963 0 0 1-2.584-.368c-.074-.025-.148-.025-.222-.025a.832.832 0 0 0-.418.123l-1.748 1.005c-.05.025-.099.05-.148.05a.273.273 0 0 1-.27-.27c0-.074.024-.123.049-.197c.024-.024.246-.834.369-1.324c0-.05.024-.123.024-.172a.556.556 0 0 0-.221-.442C2.058 13.376 1 11.586 1 9.598C1 5.945 4.57 3 8.95 3c3.765 0 6.93 2.169 7.723 5.098zm-5.154.418c.573 0 1.026-.477 1.026-1.026c0-.573-.453-1.026-1.026-1.026s-1.026.453-1.026 1.026s.453 1.026 1.026 1.026zm-5.26 0c.573 0 1.027-.477 1.027-1.026c0-.573-.454-1.026-1.027-1.026c-.572 0-1.026.453-1.026 1.026s.454 1.026 1.026 1.026z"></path></svg></div></a><a href="https://www.mobaijun.com" target="_blank" rel="noopener noreferrer" class="social-links"><div class="social-links-icon_93d67"><svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><title>Lark</title><path d="M8.813 5.477c1.038.836 2.286 2.045 3.3 3.495.171.23.377.576.457.71l.034.056a8.803 8.803 0 0 0-.922 1.3l-.271-.494C9.655 7.53 6.3 5.477 6.137 5.377a.447.447 0 0 1-.006-.004l-.666-.393-.107-.086a.499.499 0 0 1 .306-.885L6.084 4h7.997c.159.006.318.037.47.092.174.064.317.174.458.308.134.143.272.296.403.448.622.675 1.324 1.688 1.324 1.688-.573.193-1.349.736-1.349.736a5.095 5.095 0 0 0-.348-.54 20.665 20.665 0 0 0-1.037-1.255H8.813Z" fill="currentColor"></path><path d="M18.482 7.507a5.42 5.42 0 0 1 4.04.717c.248.168.788.635.242 1.233-1.7 1.67-2.194 3.225-2.63 4.599-.278.873-.541 1.697-1.066 2.424-1.813 2.508-4.114 4-6.837 4.434-.561.089-1.132.131-1.7.131-3.958 0-7.498-2.035-8.75-2.844h.003l-.161-.107c-.534-.378-.61-.723-.623-.989V7.055a.486.486 0 0 1 .827-.317l.482.589c5.082 6.201 9.126 8.063 11.626 8.53 2.246.424 3.631-.165 4.022-.37.333-.51.534-1.143.764-1.865l.006-.021c.406-1.276.898-2.821 2.322-4.477a3.93 3.93 0 0 0-2.28-.168c-1.761.394-3.403 1.96-4.89 4.643a8.27 8.27 0 0 0-.341.671c-.724-.107-1.334-.65-1.334-.65.128-.269.22-.455.345-.672 1.718-3.125 3.714-4.962 5.933-5.441ZM2.477 16.889c1.145.744 5.341 3.232 9.532 2.563 1.56-.247 2.963-.915 4.196-1.99-2.771.254-7.557-.753-13.728-7.666v7.093Z" fill="currentColor"></path></svg></div></a></div></div></div></div></div><button aria-label="mobile hamburger" class=" navHamburger_e7b06 text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="currentColor"><circle cx="8" cy="16" r="2" fill="currentColor"></circle><circle cx="16" cy="16" r="2" fill="currentColor"></circle><circle cx="24" cy="16" r="2" fill="currentColor"></circle></svg></button></div></div></div></div><section><div class="docLayout_edeb4 pt-0"><div class="rspress-sidebar-menu"><button class="flex-center mr-auto"><div class="text-md mr-2"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M4 6h24v2H4zm0 18h24v2H4zm0-12h24v2H4zm0 6h24v2H4z"></path></svg></div><span class="text-sm">Menu</span></button><button class="flex-center ml-auto"><span class="text-sm">目录</span><div class="text-md mr-2" style="transform:rotate(0deg);transition:transform 0.2s ease-out;margin-top:2px"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></button></div><aside class="sidebar_71eca rspress-sidebar "><div class="navTitleMask_71eca"><div class="navBarTitle_f6cde"><a href="/" class="flex items-center w-full h-full text-base font-semibold transition-opacity duration-300 hover:opacity-60"><img src="/logo.png" alt="logo" id="logo" class="mr-4 rspress-logo dark:hidden"/><img src="/logo.png" alt="logo" id="logo" class="mr-4 rspress-logo hidden dark:block"/><span>April 项目组</span></a></div></div><div class="rspress-scrollbar sidebarContent_71eca"><nav class="pb-2"><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/index.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:14px;margin-left:0;border-radius:0 var(--rp-radius) var(--rp-radius) 0;padding-left:24px;font-weight:bold"><span>前言</span></div></a><section class="mt-0.5 block" style="margin-left:0"><div class="flex justify-between items-center menuItem_71eca" style="border-radius:0 var(--rp-radius) var(--rp-radius) 0;cursor:pointer"><h2 class="py-2 px-3 text-sm font-medium flex" style="font-size:14px;padding-left:24px;font-weight:bold"><span class="flex-center">python教程</span></h2><div class="collapseContainer_71eca p-2 rounded-xl"><div style="cursor:pointer;transition:transform 0.2s ease-out;transform:rotate(0deg)"><svg width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M22 16 12 26l-1.4-1.4 8.6-8.6-8.6-8.6L12 6z"></path></svg></div></div></div><div class="transition-all duration-300 ease-in-out" style="overflow:hidden;max-height:0"><div class="rspress-sidebar-group transition-opacity duration-500 ease-in-out" style="opacity:0;margin-left:12px"><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/index.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>简介</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第01课：初识Python.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第01课：初识Python</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第02课：第一个Python程序.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第02课：第一个Python程序</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第03课：Python语言中的变量.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第03课：Python语言中的变量</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第04课：Python语言中的运算符.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第04课：Python语言中的运算符</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第05课：分支结构.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第05课：分支结构</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第06课：循环结构.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第06课：循环结构</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第07课：分支和循环结构的应用.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第07课：分支和循环结构的应用</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第08课：常用数据结构之列表-1.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第08课：常用数据结构之列表-1</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第09课：常用数据结构之列表-2.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第09课：常用数据结构之列表-2</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第10课：常用数据结构之元组.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第10课：常用数据结构之元组</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第11课：常用数据结构之字符串.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第11课：常用数据结构之字符串</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第12课：常用数据结构之集合.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第12课：常用数据结构之集合</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第13课：常用数据结构之字典.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第13课：常用数据结构之字典</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第14课：函数和模块.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第14课：函数和模块</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第15课：函数的应用.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第15课：函数的应用</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第16课：函数使用进阶.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第16课：函数使用进阶</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第17课：函数高级应用.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第17课：函数高级应用</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第18课：面向对象编程入门.html"><div class="menuItemActive_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第18课：面向对象编程入门</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第19课：面向对象编程进阶.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第19课：面向对象编程进阶</span></div></a></div><div><a class="link_03735 menuLink_71eca cursor-pointer" target="" href="/tutorial/python/第20课：面向对象编程应用.html"><div class="menuItem_71eca mt-0.5 py-2 px-3 font-medium flex" style="font-size:13px;margin-left:18px;border-radius:0 var(--rp-radius) var(--rp-radius) 0"><span>第20课：面向对象编程应用</span></div></a></div></div></div></section></nav></div></aside><div class="content_edeb4 rspress-doc-container flex flex-shrink-0 mx-auto"><div class="w-full flex-1"><div><div class="rspress-doc"><!--$--><h2 id="第18课面向对象编程入门" class="mt-12 mb-6 pt-8 text-2xl tracking-tight border-t-[1px] border-divider-light title_3b154">第18课：面向对象编程入门<a class="link_3b154 header-anchor" aria-hidden="true" href="#第18课面向对象编程入门">#</a></h2>
+<p class="my-4 leading-7">面向对象编程是一种非常流行的<strong class="font-semibold">编程范式</strong>（programming paradigm），所谓编程范式就是<strong class="font-semibold">程序设计的方法论</strong>
+，简单的说就是程序员对程序的认知和理解以及他们编写代码的方式。</p>
+<p class="my-4 leading-7">在前面的课程中，我们说过“<strong class="font-semibold">程序是指令的集合</strong>”，运行程序时，程序中的语句会变成一条或多条指令，然后由CPU（中央处理器）去执行。为了简化程序的设计，我们又讲到了函数，
+<strong class="font-semibold">把相对独立且经常重复使用的代码放置到函数中</strong>，在需要使用这些代码的时候调用函数即可。如果一个函数的功能过于复杂和臃肿，我们又可以进一步
+<strong class="font-semibold">将函数进一步拆分为多个子函数</strong>来降低系统的复杂性。</p>
+<p class="my-4 leading-7">不知大家是否发现，编程其实是写程序的人按照计算机的工作方式通过代码控制机器完成任务。但是，计算机的工作方式与人类正常的思维模式是不同的，如果编程就必须抛弃人类正常的思维方式去迎合计算机，编程的乐趣就少了很多。这里，我想说的并不是我们不能按照计算机的工作方式去编写代码，但是当我们需要开发一个复杂的系统时，这种方式会让代码过于复杂，从而导致开发和维护工作都变得举步维艰。</p>
+<p class="my-4 leading-7">随着软件复杂性的增加，编写正确可靠的代码会变成了一项极为艰巨的任务，这也是很多人都坚信“软件开发是人类改造世界所有活动中最为复杂的活动”的原因。如何用程序描述复杂系统和解决复杂问题，就成为了所有程序员必须要思考和直面的问题。诞生于上世纪70年代的
+Smalltalk 语言让软件开发者看到了希望，因为它引入了一种新的编程范式叫面向对象编程。在面向对象编程的世界里，程序中的*
+<em>数据和操作数据的函数是一个逻辑上的整体</em>*，我们称之为<strong class="font-semibold">对象</strong>，<strong class="font-semibold">对象可以接收消息</strong>，解决问题的方法就是**创建对象并向对象发出各种各样的消息
+**；通过消息传递，程序中的多个对象可以协同工作，这样就能构造出复杂的系统并解决现实中的问题。当然，面向对象编程的雏形还可以向前追溯到更早期的Simula语言，但这不是我们要讨论的重点。</p>
+<blockquote class="border-l-2 border-solid border-divider pl-4 my-6 transition-colors duration-500 blockquote_3b154">
+<p class="my-4 leading-7"><strong class="font-semibold">说明：</strong> 今天我们使用的很多高级程序设计语言都支持面向对象编程，但是面向对象编程也不是解决软件开发中所有问题的“银弹”，或者说在软件开发这个行业目前还没有所谓的“银弹”。关于这个问题，大家可以参考
+IBM360 系统之父弗雷德里克·布鲁克斯所发表的论文《没有银弹：软件工程的本质性与附属性工作》或软件工程的经典著作《人月神话》一书。</p>
+</blockquote>
+<h3 id="类和对象" class="mt-10 mb-2 leading-7 text-xl title_3b154">类和对象<a class="link_3b154 header-anchor" aria-hidden="true" href="#类和对象">#</a></h3>
+<p class="my-4 leading-7">如果要用一句话来概括面向对象编程，我认为下面的说法是相当精辟和准确的。</p>
+<blockquote class="border-l-2 border-solid border-divider pl-4 my-6 transition-colors duration-500 blockquote_3b154">
+<p class="my-4 leading-7"><strong class="font-semibold">面向对象编程</strong>：把一组数据和处理数据的方法组成<strong class="font-semibold">对象</strong>，把行为相同的对象归纳为<strong class="font-semibold">类</strong>，通过<strong class="font-semibold">封装</strong>隐藏对象的内部细节，通过
+<strong class="font-semibold">继承</strong>实现类的特化和泛化，通过<strong class="font-semibold">多态</strong>实现基于对象类型的动态分派。</p>
+</blockquote>
+<p class="my-4 leading-7">这句话对初学者来说可能不那么容易理解，但是我可以先为大家圈出几个关键词：<strong class="font-semibold">对象</strong>（object）、<strong class="font-semibold">类</strong>（class）、<strong class="font-semibold">封装</strong>
+（encapsulation）、<strong class="font-semibold">继承</strong>（inheritance）、<strong class="font-semibold">多态</strong>（polymorphism）。</p>
+<p class="my-4 leading-7">我们先说说类和对象这两个词。在面向对象编程中，<strong class="font-semibold">类是一个抽象的概念，对象是一个具体的概念</strong>
+。我们把同一类对象的共同特征抽取出来就是一个类，比如我们经常说的人类，这是一个抽象概念，而我们每个人就是人类的这个抽象概念下的实实在在的存在，也就是一个对象。简而言之，
+<strong class="font-semibold">类是对象的蓝图和模板，对象是类的实例，是可以接受消息的实体</strong>。</p>
+<p class="my-4 leading-7">在面向对象编程的世界中，<strong class="font-semibold">一切皆为对象</strong>，<strong class="font-semibold">对象都有属性和行为</strong>，<strong class="font-semibold">每个对象都是独一无二的</strong>，而且<strong class="font-semibold">对象一定属于某个类</strong>
+。对象的属性是对象的静态特征，对象的行为是对象的动态特征。按照上面的说法，如果我们把拥有共同特征的对象的属性和行为都抽取出来，就可以定义出一个类。</p>
+<h3 id="定义类" class="mt-10 mb-2 leading-7 text-xl title_3b154">定义类<a class="link_3b154 header-anchor" aria-hidden="true" href="#定义类">#</a></h3>
+<p class="my-4 leading-7">在 Python 语言中，我们可以使用<code>class</code>
+关键字加上类名来定义类，通过缩进我们可以确定类的代码块，就如同定义函数那样。在类的代码块中，我们需要写一些函数，我们说过类是一个抽象概念，那么这些函数就是我们对一类对象共同的动态特征的提取。写在类里面的函数我们通常称之为
+<strong class="font-semibold">方法</strong>，方法就是对象的行为，也就是对象可以接收的消息。方法的第一个参数通常都是<code>self</code>，它代表了接收这个消息的对象本身。</p>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>class Student:
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>    def study(self, course_name):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>        print(f&#x27;学生正在学习{course_name}.&#x27;)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>    def play(self):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>        print(f&#x27;学生正在玩游戏.&#x27;)</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<h3 id="创建和使用对象" class="mt-10 mb-2 leading-7 text-xl title_3b154">创建和使用对象<a class="link_3b154 header-anchor" aria-hidden="true" href="#创建和使用对象">#</a></h3>
+<p class="my-4 leading-7">在我们定义好一个类之后，可以使用构造器语法来创建对象，代码如下所示。</p>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>stu1 = Student()
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>stu2 = Student()
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>print(stu1)    # &lt;__main__.Student object at 0x10ad5ac50&gt;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>print(stu2)    # &lt;__main__.Student object at 0x10ad5acd0&gt; 
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>print(hex(id(stu1)), hex(id(stu2)))    # 0x10ad5ac50 0x10ad5acd0</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<p class="my-4 leading-7">在类的名字后跟上圆括号就是所谓的构造器语法，上面的代码创建了两个学生对象，一个赋值给变量<code>stu1</code>，一个赋值给变量<code>stu2</code>
+。当我们用<code>print</code>函数打印<code>stu1</code>和<code>stu2</code>两个变量时，我们会看到输出了对象在内存中的地址（十六进制形式），跟我们用<code>id</code>
+函数查看对象标识获得的值是相同的。现在我们可以告诉大家，我们定义的变量其实保存的是一个对象在内存中的逻辑地址（位置），通过这个逻辑地址，我们就可以在内存中找到这个对象。所以<code>stu3 = stu2</code>
+这样的赋值语句并没有创建新的对象，只是用一个新的变量保存了已有对象的地址。</p>
+<p class="my-4 leading-7">接下来，我们尝试给对象发消息，即调用对象的方法。刚才的<code>Student</code>类中我们定义了<code>study</code>和<code>play</code>
+两个方法，两个方法的第一个参数<code>self</code>代表了接收消息的学生对象，<code>study</code>方法的第二个参数是学习的课程名称。Python中，给对象发消息有两种方式，请看下面的代码。</p>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span># 通过“类.方法”调用方法
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span># 第一个参数是接收消息的对象
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span># 第二个参数是学习的课程名称
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>Student.study(stu1, &#x27;Python程序设计&#x27;)    # 学生正在学习Python程序设计.
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span># 通过“对象.方法”调用方法
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span># 点前面的对象就是接收消息的对象
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span># 只需要传入第二个参数课程名称
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>stu1.study(&#x27;Python程序设计&#x27;)             # 学生正在学习Python程序设计.
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>Student.play(stu2)                      # 学生正在玩游戏.
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>stu2.play()                             # 学生正在玩游戏.</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<h3 id="初始化方法" class="mt-10 mb-2 leading-7 text-xl title_3b154">初始化方法<a class="link_3b154 header-anchor" aria-hidden="true" href="#初始化方法">#</a></h3>
+<p class="my-4 leading-7">大家可能已经注意到了，刚才我们创建的学生对象只有行为没有属性，如果要给学生对象定义属性，我们可以修改<code>Student</code>
+类，为其添加一个名为<code>__init__</code>的方法。在我们调用<code>Student</code>
+类的构造器创建对象时，首先会在内存中获得保存学生对象所需的内存空间，然后通过自动执行<code>__init__</code>
+方法，完成对内存的初始化操作，也就是把数据放到内存空间中。所以我们可以通过给<code>Student</code>类添加<code>__init__</code>
+方法的方式为学生对象指定属性，同时完成对属性赋初始值的操作，正因如此，<code>__init__</code>方法通常也被称为初始化方法。</p>
+<p class="my-4 leading-7">我们对上面的<code>Student</code>类稍作修改，给学生对象添加<code>name</code>（姓名）和<code>age</code>（年龄）两个属性。</p>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>class Student:
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>    &quot;&quot;&quot;学生&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>    def __init__(self, name, age):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>        &quot;&quot;&quot;初始化方法&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>        self.name = name
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>        self.age = age
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>    def study(self, course_name):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>        &quot;&quot;&quot;学习&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>        print(f&#x27;{self.name}正在学习{course_name}.&#x27;)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">12</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">13</span>    def play(self):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">14</span>        &quot;&quot;&quot;玩耍&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">15</span>        print(f&#x27;{self.name}正在玩游戏.&#x27;)</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<p class="my-4 leading-7">修改刚才创建对象和给对象发消息的代码，重新执行一次，看看程序的执行结果有什么变化。</p>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span># 调用Student类的构造器创建对象并传入初始化参数
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>stu1 = Student(&#x27;骆昊&#x27;, 44)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>stu2 = Student(&#x27;王大锤&#x27;, 25)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>stu1.study(&#x27;Python程序设计&#x27;)    # 骆昊正在学习Python程序设计.
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>stu2.play()                    # 王大锤正在玩游戏.</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<h3 id="面向对象的支柱" class="mt-10 mb-2 leading-7 text-xl title_3b154">面向对象的支柱<a class="link_3b154 header-anchor" aria-hidden="true" href="#面向对象的支柱">#</a></h3>
+<p class="my-4 leading-7">面向对象编程有三大支柱，就是我们之前给大家划重点的时候圈出的三个词：<strong class="font-semibold">封装</strong>、<strong class="font-semibold">继承</strong>和<strong class="font-semibold">多态</strong>
+。后面两个概念在下一节课中会详细说明，这里我们先说一下什么是封装。我自己对封装的理解是：**隐藏一切可以隐藏的实现细节，只向外界暴露简单的调用接口
+**
+。我们在类中定义的对象方法其实就是一种封装，这种封装可以让我们在创建对象之后，只需要给对象发送一个消息就可以执行方法中的代码，也就是说我们在只知道方法的名字和参数（方法的外部视图），不知道方法内部实现细节（方法的内部视图）的情况下就完成了对方法的使用。</p>
+<p class="my-4 leading-7">举一个例子，假如要控制一个机器人帮我倒杯水，如果不使用面向对象编程，不做任何的封装，那么就需要向这个机器人发出一系列的指令，如站起来、向左转、向前走5步、拿起面前的水杯、向后转、向前走10步、弯腰、放下水杯、按下出水按钮、等待10秒、松开出水按钮、拿起水杯、向右转、向前走5步、放下水杯等，才能完成这个简单的操作，想想都觉得麻烦。按照面向对象编程的思想，我们可以将倒水的操作封装到机器人的一个方法中，当需要机器人帮我们倒水的时候，只需要向机器人对象发出倒水的消息就可以了，这样做不是更好吗？</p>
+<p class="my-4 leading-7">在很多场景下，面向对象编程其实就是一个三步走的问题。第一步定义类，第二步创建对象，第三步给对象发消息。当然，有的时候我们是不需要第一步的，因为我们想用的类可能已经存在了。之前我们说过，Python内置的<code>list</code>、<code>set</code>、<code>dict</code>
+其实都是类，如果要创建列表、集合、字典对象，我们就不用自定义类了。当然，有的类并不是 Python
+标准库中直接提供的，它可能来自于第三方的代码，如何安装和使用三方代码在后续课程中会进行讨论。在某些特殊的场景中，我们会用到名为“内置对象”的对象，所谓“内置对象”就是说上面三步走的第一步和第二步都不需要了，因为类已经存在而且对象已然创建过了，直接向对象发消息就可以了，这也就是我们常说的“开箱即用”。</p>
+<h3 id="面向对象案例" class="mt-10 mb-2 leading-7 text-xl title_3b154">面向对象案例<a class="link_3b154 header-anchor" aria-hidden="true" href="#面向对象案例">#</a></h3>
+<h4 id="案例1定义一个类描述数字时钟" class="mt-8 leading-6 text-base title_3b154">案例1：定义一个类描述数字时钟。<a class="link_3b154 header-anchor" aria-hidden="true" href="#案例1定义一个类描述数字时钟">#</a></h4>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>import time
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span># 定义时钟类
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>class Clock:
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>    &quot;&quot;&quot;数字时钟&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>    def __init__(self, hour=0, minute=0, second=0):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>        &quot;&quot;&quot;初始化方法
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>        :param hour: 时
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>        :param minute: 分
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">12</span>        :param second: 秒
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">13</span>        &quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">14</span>        self.hour = hour
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">15</span>        self.min = minute
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">16</span>        self.sec = second
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">17</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">18</span>    def run(self):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">19</span>        &quot;&quot;&quot;走字&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">20</span>        self.sec += 1
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">21</span>        if self.sec == 60:
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">22</span>            self.sec = 0
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">23</span>            self.min += 1
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">24</span>            if self.min == 60:
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">25</span>                self.min = 0
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">26</span>                self.hour += 1
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">27</span>                if self.hour == 24:
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">28</span>                    self.hour = 0
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">29</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">30</span>    def show(self):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">31</span>        &quot;&quot;&quot;显示时间&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">32</span>        return f&#x27;{self.hour:0&gt;2d}:{self.min:0&gt;2d}:{self.sec:0&gt;2d}&#x27;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">33</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">34</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">35</span># 创建时钟对象
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">36</span>clock = Clock(23, 59, 58)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">37</span>while True:
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">38</span>    # 给时钟对象发消息读取时间
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">39</span>    print(clock.show())
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">40</span>    # 休眠1秒钟
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">41</span>    time.sleep(1)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">42</span>    # 给时钟对象发消息使其走字
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">43</span>    clock.run()</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<h4 id="案例2定义一个类描述平面上的点要求提供计算到另一个点距离的方法" class="mt-8 leading-6 text-base title_3b154">案例2：定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。<a class="link_3b154 header-anchor" aria-hidden="true" href="#案例2定义一个类描述平面上的点要求提供计算到另一个点距离的方法">#</a></h4>
+<div class="language-Python"><div class="rspress-code-content rspress-scrollbar"><div><pre class="code" style="background-color:inherit"><code class="language-Python" style="white-space:pre-wrap"><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">1</span><span>class Point:
+</span></span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">2</span>    &quot;&quot;&quot;平面上的点&quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">3</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">4</span>    def __init__(self, x=0, y=0):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">5</span>        &quot;&quot;&quot;初始化方法
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">6</span>        :param x: 横坐标
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">7</span>        :param y: 纵坐标
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">8</span>        &quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">9</span>        self.x, self.y = x, y
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">10</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">11</span>    def distance_to(self, other):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">12</span>        &quot;&quot;&quot;计算与另一个点的距离
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">13</span>        :param other: 另一个点
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">14</span>        &quot;&quot;&quot;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">15</span>        dx = self.x - other.x
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">16</span>        dy = self.y - other.y
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">17</span>        return (dx * dx + dy * dy) ** 0.5
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">18</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">19</span>    def __str__(self):
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">20</span>        return f&#x27;({self.x}, {self.y})&#x27;
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">21</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">22</span>
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">23</span>p1 = Point(3, 5)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">24</span>p2 = Point(6, 9)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">25</span>print(p1)  # 调用对象的__str__魔法方法
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">26</span>print(p2)
+</span><span style="display:flex;padding:0 1.25rem"><span class="linenumber react-syntax-highlighter-line-number" style="display:inline-block;min-width:1.25em;padding-right:1em;text-align:right;user-select:none;color:var(--code-token-comment)">27</span>print(p1.distance_to(p2))</span></code></pre></div><div class="code-button-group_15153"><button><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrapped_15153"><path fill="#22a041" d="M21 5H3v2h18zM3 19h7v-2H3zm0-6h15c1 0 2 .43 2 2s-1 2-2 2h-2v-2l-4 3 4 3v-2h2c2.95 0 4-1.27 4-4 0-2.72-1-4-4-4H3z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" class="icon-wrap_15153"><path fill="currentColor" d="M16 7H3V5h13v2M3 19h13v-2H3v2m19-7-4-3v2H3v2h15v2l4-3Z"></path></svg></button><button class="code-copy-button_15153"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 30 30" class="icon-copy_15153"><path fill="currentColor" d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z"></path><path fill="currentColor" d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z"></path></svg><svg width="32" height="32" viewBox="0 0 30 30" class="icon-success_15153"><path fill="#49cd37" d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z"></path></svg></button></div></div></div>
+<h3 id="总结" class="mt-10 mb-2 leading-7 text-xl title_3b154">总结<a class="link_3b154 header-anchor" aria-hidden="true" href="#总结">#</a></h3>
+<p class="my-4 leading-7">面向对象编程是一种非常流行的编程范式，除此之外还有<strong class="font-semibold">指令式编程</strong>、<strong class="font-semibold">函数式编程</strong>等编程范式。由于现实世界是由对象构成的，而对象是可以接收消息的实体，所以
+<strong class="font-semibold">面向对象编程更符合人类正常的思维习惯</strong>
+。类是抽象的，对象是具体的，有了类就能创建对象，有了对象就可以接收消息，这就是面向对象编程的基础。定义类的过程是一个抽象的过程，找到对象公共的属性属于数据抽象，找到对象公共的方法属于行为抽象。抽象的过程是一个仁者见仁智者见智的过程，对同一类对象进行抽象可能会得到不同的结果，如下图所示。</p>
+<blockquote class="border-l-2 border-solid border-divider pl-4 my-6 transition-colors duration-500 blockquote_3b154">
+<p class="my-4 leading-7"><strong class="font-semibold">说明：</strong> 本节课的插图来自于 Grady Booc 等撰写的《面向对象分析与设计》一书，该书是讲解面向对象编程的经典著作，有兴趣的读者可以购买和阅读这本书来了解更多的面向对象的相关知识。</p>
+</blockquote><!--/$--></div><div class="rspress-doc-footer"><footer class="mt-8"><div class="xs:flex pb-5 px-2 justify-end items-center"><div class="flex text-sm text-text-2 leading-6 sm:leading-8 font-medium"><p>最后更新时间<!-- -->: <span>2024/5/30 15:56:53</span></p></div></div><div class="flex flex-col"></div><div class="flex flex-col sm:flex-row sm:justify-around gap-4 pt-6"><div class="prev_e7091 flex flex-col"><a class="link_03735 pager-link_9b9a7 cursor-pointer" target="" href="/tutorial/python/第17课：函数高级应用.html"><span class="desc_9b9a7">上一章</span><span class="title_9b9a7">第17课：函数高级应用</span></a></div><div class="next_e7091 flex flex-col"><a class="link_03735 pager-link_9b9a7 next_9b9a7 cursor-pointer" target="" href="/tutorial/python/第19课：面向对象编程进阶.html"><span class="desc_9b9a7">下一章</span><span class="title_9b9a7">第19课：面向对象编程进阶</span></a></div></div></footer></div></div></div><div class="aside-container_edeb4"><div><div class="flex flex-col"><div class="&lt;lg:hidden"><div id="aside-container" class="relative text-sm font-medium"><div class="leading-7 block text-sm font-semibold pl-3">目录</div><nav class="mt-1"><ul class="relative"><li><a href="#第18课面向对象编程入门" title="第18课：面向对象编程入门" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:0;font-weight:semibold"><span class="aside-link-text block">第18课：面向对象编程入门</span></a></li><li><a href="#类和对象" title="类和对象" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">类和对象</span></a></li><li><a href="#定义类" title="定义类" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">定义类</span></a></li><li><a href="#创建和使用对象" title="创建和使用对象" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">创建和使用对象</span></a></li><li><a href="#初始化方法" title="初始化方法" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">初始化方法</span></a></li><li><a href="#面向对象的支柱" title="面向对象的支柱" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">面向对象的支柱</span></a></li><li><a href="#面向对象案例" title="面向对象案例" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">面向对象案例</span></a></li><li><a href="#案例1定义一个类描述数字时钟" title="案例1：定义一个类描述数字时钟。" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:24px;font-weight:semibold"><span class="aside-link-text block">案例1：定义一个类描述数字时钟。</span></a></li><li><a href="#案例2定义一个类描述平面上的点要求提供计算到另一个点距离的方法" title="案例2：定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:24px;font-weight:semibold"><span class="aside-link-text block">案例2：定义一个类描述平面上的点，要求提供计算到另一个点距离的方法。</span></a></li><li><a href="#总结" title="总结" class="aside-link transition-all duration-300 hover:text-text-1 text-text-2 block" style="padding-left:12px;font-weight:semibold"><span class="aside-link-text block">总结</span></a></li></ul></nav></div></div></div></div></div></div></div></section></div></div><div id="search-container"></div></body></html>

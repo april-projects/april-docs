@@ -8,5 +8,9 @@
     "text": "教程",
     "link": "/tutorial/",
     "activeMatch": "^/tutorial/"
+  },
+  {
+    "text": "API",
+    "link": "https://api.mobaijun.com"
   }
 ]
