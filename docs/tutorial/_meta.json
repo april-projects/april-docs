@@ -2,14 +2,12 @@
   {
     "type": "file",
     "name": "index",
-    "label": "简介",
-    "collapsible": true,
-    "collapsed": true
+    "label": "前言"
   },
   {
     "type": "dir",
-    "name": "basic",
-    "label": "代码规范指南",
+    "name": "python",
+    "label": "python教程",
     "collapsible": true,
     "collapsed": true
   }

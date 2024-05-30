@@ -12,7 +12,7 @@ export default defineConfig({
     icon: '/favicon.png',
     themeConfig: {
         socialLinks: [
-            {icon: 'github', mode: 'link', content: 'https://github.com/mobaijun'},
+            {icon: 'github', mode: 'link', content: 'https://github.com/april-projects'},
             {icon: 'wechat', mode: 'link', content: 'https://cdn.jsdelivr.net/gh/mobaijun/blog_css_js/image/about.png'},
             {icon: 'lark', mode: 'link', content: 'https://www.mobaijun.com'},
         ],
